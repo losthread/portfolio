@@ -1,10 +1,10 @@
-import { Terminal } from 'lucide-react';
+import { Terminal, ChevronDown, Mouse } from 'lucide-react';
 import SocialLink from './ui/SocialLink'
 import Role from './ui/Role';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center gap-7">
+    <section className="min-h-screen flex flex-col items-center justify-center gap-7 pt-10">
       {/* The Background Grid Lines Overlay */}
       <div 
         className="absolute inset-0 -z-10" 
@@ -59,7 +59,7 @@ export default function Hero() {
 
       {/* Body Text */}
       <div>
-        <p className="text-muted-foreground text-xl">Passionate about <span className="text-primary">Cybersecurity</span>, <span className="text-iot">IoT</span>, <span className="text-devops">DevOps</span>, and <span className="text-cloud">Cloud</span> technologies.</p>
+        <p className="text-muted-foreground text-xl">Exploring   <span className="text-primary">Cybersecurity</span>, <span className="text-iot">IoT</span>, <span className="text-devops">DevOps</span>, and <span className="text-cloud">Cloud</span> technologies.</p>
       </div>
 
       {/* Social media links */}
@@ -73,6 +73,30 @@ export default function Hero() {
           url="https://linkedin.com/..." 
           icon={'linkedin'} 
           alt="LinkedIn" 
+        />
+      </div>
+
+      {/* Explore my work navigator */}
+      <a href="#projects"
+         className='group flex items-center gap-2 
+                    border rounded-lg py-3 px-6
+                    text-black bg-primary
+                    shadow-[0_0_17px_color-mix(in_srgb,var(--color-primary),transparent_65%)]
+                    hover:opacity-80
+                    transition-all ease-in-out duration-400
+                    mt-3'
+      >
+        Explore My Work 
+        <ChevronDown className="size-4 
+                                transition-transform ease-in-out group-hover:translate-y-1" 
+        />
+      </a>
+
+      {/* Animated mouse icon */}
+      <div>
+        <Mouse className='mt-3 size-11 animate-bounce opacity-70 text-primary' 
+               strokeWidth={1} // Lower = thinner. Try 1 for a very sleek look.
+               style={{ filter: "drop-shadow(0 0 8px var(--color-primary))" }}
         />
       </div>
     </section>
