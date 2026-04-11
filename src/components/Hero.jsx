@@ -1,4 +1,5 @@
-import { Terminal } from "lucide-react";
+import { Terminal } from 'lucide-react';
+import SocialLink from './ui/SocialLink'
 import Role from './ui/Role';
 
 export default function Hero() {
@@ -45,7 +46,7 @@ export default function Hero() {
           <span
             className="text-primary"
             style={{
-              textShadow: "0 0 14px color-mix(in oklch, var(--primary) 80%, transparent)"
+              textShadow: "0 0 14px color-mix(in oklch, var(--primary) 90%, transparent)"
             }}
           >
             Naik
@@ -59,6 +60,20 @@ export default function Hero() {
       {/* Body Text */}
       <div>
         <p className="text-muted-foreground text-xl">Passionate about <span className="text-primary">Cybersecurity</span>, <span className="text-iot">IoT</span>, <span className="text-devops">DevOps</span>, and <span className="text-cloud">Cloud</span> technologies.</p>
+      </div>
+
+      {/* Social media links */}
+      <div className="flex gap-4">
+        <SocialLink 
+          url="https://github.com/losthread" 
+          icon={'github'} 
+          alt="GitHub" 
+        />
+        <SocialLink 
+          url="https://linkedin.com/..." 
+          icon={'linkedin'} 
+          alt="LinkedIn" 
+        />
       </div>
     </section>
   );
