@@ -1,4 +1,5 @@
 import { Terminal } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const navItems = [
   { name: "About", href: "#about" },
@@ -7,12 +8,27 @@ const navItems = [
 ]
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // set is scrolled if user scrolls beyond 30px
+      setIsScrolled(window.scrollY > 30);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  // [] n dependencies from components so [] is empty
+  // removing evenlistener cleans it up and prvents memory leaks
+  // also prevents looping it for each render
+  
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/80 backdrop-blur-md border-b border-border">
-      <nav className="flex items-center justify-between px-6 mx-auto">
+    <header className={`px-16 fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "bg-background/70 backdrop-blur-md border-b border-border shadow-2xl py-5" : "bg-transparent border-b-transparent py-5"}`}>
+      <nav className="flex items-center justify-between mx-auto">
         
         {/* Left Side: Logo & Name */}
-        <div className="flex items-center gap-2 py-4">
+        <div className="flex items-center gap-2">
           <a 
             className="p-2 rounded-lg border border-primary/50 bg-primary/10 transition-colors hover:bg-primary/20"
             href='#'

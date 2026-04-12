@@ -4,7 +4,7 @@ import Role from './ui/Role';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center gap-7 pt-10">
+    <section className="min-h-screen flex flex-col items-center justify-center gap-8 pt-10">
       {/* The Background Grid Lines Overlay */}
       <div 
         className="absolute inset-0 -z-10" 
@@ -70,7 +70,7 @@ export default function Hero() {
           alt="GitHub" 
         />
         <SocialLink 
-          url="https://linkedin.com/..." 
+          url="https://www.linkedin.com/in/parth-naik-a26944351/" 
           icon={'linkedin'} 
           alt="LinkedIn" 
         />
@@ -94,7 +94,7 @@ export default function Hero() {
 
       {/* Animated mouse icon */}
       <div>
-        <Mouse className='mt-3 size-11 animate-bounce opacity-70 text-primary' 
+        <Mouse className='size-11 animate-bounce opacity-70 text-primary' 
                strokeWidth={1} // Lower = thinner. Try 1 for a very sleek look.
                style={{ filter: "drop-shadow(0 0 8px var(--color-primary))" }}
         />
