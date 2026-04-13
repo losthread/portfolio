@@ -8,7 +8,6 @@ html {
 }
 
 :root {
-  /* DARK THEME BY DEFAULT (as per screenshot) */
   --background: oklch(0.12 0.01 220); 
   --foreground: oklch(0.98 0.01 220);
   --card: oklch(0.145 0 0);

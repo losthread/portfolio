@@ -2,6 +2,7 @@
 export default function SocialLink({ url, icon, alt }) {
   return (
     <a 
+      id={url}
       href={url} 
       target="_blank" 
       rel="noreferrer noopener"
