@@ -10,9 +10,9 @@ export default function About() {
         <div className="h-0.5 w-full bg-muted-foreground/20" />
       </div>
 
-      <div className='flex w-full gap-12'>
-        <div className='flex flex-1 flex-col gap-7'>
-          <div className='flex flex-col gap-3 justfy-center border-2 rounded-lg p-5 border-muted-foreground/20'>
+      <div className='grid grid-cols-2 gap-12 w-full items-start'>
+        <div className='flex flex-col gap-7'>
+          <div className='flex flex-col gap-3 justfy-center border-2 rounded-lg p-5 border-muted-foreground/20 overflow-scroll'>
             <div className='flex items-center gap-3'>
               <Code className='text-primary rounded-sm p-2 size-9 bg-primary/10' />
               <h3 className='font-mono text-muted-foreground'>bio.json</h3>
@@ -61,7 +61,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className='flex flex-col flex-1 gap-7 max-w-full'>
+        <div className='flex flex-col gap-7 min-w-0'>
           <div className='flex gap-3'>
             <Palette className='text-primary' />
             <h3 className='font-semibold'>Areas of Interest</h3>
@@ -96,14 +96,14 @@ export default function About() {
 
           <div className='border rounded-xl max-w-full overflow-hidden'>
             <div className='flex px-5 py-4 gap-2 items-center border-b bg-muted/20'>
-              <div className='h-3 w-3 rounded-full bg-red-500/80' />
-              <div className='h-3 w-3 rounded-full bg-yellow-500/80' />
-              <div className='h-3 w-3 rounded-full bg-green-500/80' />
-              <h3 className='ml-2 font-mono text-muted-foreground text-xs uppercase tracking-widest'>terminal</h3>
+              <div className='h-3 w-3 rounded-full bg-red-500/80 shrink-0' />
+              <div className='h-3 w-3 rounded-full bg-yellow-500/80 shrink-0' />
+              <div className='h-3 w-3 rounded-full bg-green-500/80 shrink-0' />
+              <h3 className='ml-2 font-mono text-muted-foreground text-xs tracking-widest'>terminal</h3>
             </div>
 
-            <div className='px-6 py-5 bg-black/20'>
-              <pre className="font-mono text-sm leading-normal whitespace-pre-wrap text-iot/80">
+            <div className='px-6 py-5 bg-black/20 overflow-x-scroll'>
+              <pre className="font-mono text-sm leading-normal text-iot/80">
                 <span className="text-primary">$</span> <span className="text-muted-foreground">cat current.txt</span>
                 {"\n"}
                 Learning frontend development with react and tailwind...
