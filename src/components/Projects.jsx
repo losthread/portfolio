@@ -32,10 +32,10 @@ export default function Projects()
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <ProjectDescription
             className="lg:order-1"
-            title={`Square Foot Interior Studios`}  
-            description={`A modern, fully responsive landing page built for an interior design studio. Features smooth animations, optimized performance, and an elegant UI showcasing their portfolio and services.`}
+            title={`Personal Finance Tracker`}  
+            description={`A simplified f=personal finance management and budgeting tool featuring data visualisation to analyze expenses, and local data persistence`}
             techStack={[`Html`, `Css`, `Javascript`]}
-            url={`https://squarefootinteriors.netlify.app/`}
+            url={`https://ledgertrack.netlify.app/`}
             isReversed={true}
           />
 
