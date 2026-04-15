@@ -1,23 +1,12 @@
 import { Terminal, ChevronDown, Mouse } from 'lucide-react';
-import SocialLink from './ui/SocialLink'
+import Overlay from './ui/Overlay';
+import SocialLink from './ui/SocialLink';
 import Role from './ui/Role';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center gap-8 pt-10">
-      {/* The Background Grid Lines Overlay */}
-      <div 
-        className="absolute inset-0 -z-10" 
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, var(--color-border) 1px, transparent 1px),
-            linear-gradient(to bottom, var(--color-border) 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px',
-          maskImage: 'radial-gradient(ellipse at center, black, transparent 90%)',
-          opacity: '0.55' 
-        }}
-      />
+    <section className="min-h-screen flex flex-col items-center justify-center gap-8 pt-10 px-30">
+      <Overlay />
 
       {/* The Subtle Glow Overlay */}
       <div 

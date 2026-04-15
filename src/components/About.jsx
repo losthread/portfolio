@@ -1,14 +1,12 @@
 import { Code, Layers3, Palette, Shield, Cpu, Server, Cloud } from 'lucide-react';
+import SectionIntro from './ui/SectionIntro';
 import SkillStat from './ui/SkillStat';
 import DomainCard from './ui/DomainCard';
 
 export default function About() {
   return (
-    <section id='about' className="flex flex-col gap-11 px-16">
-      <div className="flex items-center gap-4">
-        <h2 className="text-4xl font-bold whitespace-nowrap">About Me</h2>
-        <div className="h-0.5 w-full bg-muted-foreground/20" />
-      </div>
+    <section id='about' className="flex flex-col gap-11 px-30 mb-40">
+      <SectionIntro sectionName={"About"} />
 
       <div className='grid grid-cols-2 gap-12 w-full items-start'>
         <div className='flex flex-col gap-7'>
@@ -51,7 +49,7 @@ export default function About() {
               <h3 className='font-bold'>Skills</h3>
             </div>
 
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-4'>
               <SkillStat name={`React`} percentageCompletion={50} />
               <SkillStat name={`TailwindCSS`} percentageCompletion={60} />
               <SkillStat name={`Django`} percentageCompletion={10} />
