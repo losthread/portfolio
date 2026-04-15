@@ -3,20 +3,25 @@ import SectionIntro from './ui/SectionIntro';
 import SkillStat from './ui/SkillStat';
 import DomainCard from './ui/DomainCard';
 
-export default function About() {
+export default function About() 
+{
   return (
-    <section id='about' className="flex flex-col gap-11 px-30 mb-40">
+    /* 1. Responsive Padding: px-6 on mobile, up to px-30 on desktop */
+    <section id='about' className="flex flex-col gap-11 px-6 md:px-20 lg:px-30 mb-40">
       <SectionIntro sectionName={"About"} />
 
-      <div className='grid grid-cols-2 gap-12 w-full items-start'>
+      {/* 2. Responsive Grid: grid-cols-1 by default, lg:grid-cols-2 for desktop */}
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 w-full items-start'>
+        
+        {/* Left Column (Bio & Skills) */}
         <div className='flex flex-col gap-7'>
-          <div className='flex flex-col gap-3 justfy-center border-2 rounded-lg p-5 border-muted-foreground/20 overflow-scroll'>
+          <div className='flex flex-col gap-3 justify-center border-2 rounded-lg p-5 border-muted-foreground/20 overflow-x-auto'>
             <div className='flex items-center gap-3'>
               <Code className='text-primary rounded-sm p-2 size-9 bg-primary/10' />
               <h3 className='font-mono text-muted-foreground'>bio.json</h3>
             </div>
 
-            <pre className="font-mono text-sm leading-loose rounded-lg border-white/5">
+            <pre className="font-mono text-sm leading-loose rounded-lg border-white/5 whitespace-pre-wrap sm:whitespace-pre">
               <span className="text-primary">{"{"}</span>
               {"\n  "}
               <span className="text-cloud">"role"</span>: <span className="text-iot">"Fullstack developer"</span>,
@@ -33,7 +38,7 @@ export default function About() {
 
           <div className='flex flex-col gap-6 text-muted-foreground text-md'>
             <p>
-              I am a student enjoys exploring new technologies.
+              I am a student who enjoys exploring new technologies.
               Not yet committed to any domain in particular but exploring Cybersecurity, IoT, DevOps and Cloud.
             </p>
 
@@ -59,6 +64,7 @@ export default function About() {
           </div>
         </div>
 
+        {/* Right Column (Interests & Terminal) */}
         <div className='flex flex-col gap-7 min-w-0'>
           <div className='flex gap-3'>
             <Palette className='text-primary' />
@@ -100,8 +106,8 @@ export default function About() {
               <h3 className='ml-2 font-mono text-muted-foreground text-xs tracking-widest'>terminal</h3>
             </div>
 
-            <div className='px-6 py-5 bg-black/20 overflow-x-scroll'>
-              <pre className="font-mono text-sm leading-normal text-iot/80">
+            <div className='px-6 py-5 bg-black/20 overflow-x-auto'>
+              <pre className="font-mono text-sm leading-normal text-iot/80 whitespace-pre-wrap sm:whitespace-pre overflow-x-scroll">
                 <span className="text-primary">$</span> <span className="text-muted-foreground">cat current.txt</span>
                 {"\n"}
                 Learning frontend development with react and tailwind...
