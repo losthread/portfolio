@@ -5,7 +5,7 @@ import ProjectDescription from "./ui/ProjectDescription";
 export default function Projects() 
 {
   return (
-    <section id='projects' className="flex flex-col gap-11 px-6 md:px-20 lg:px-30">
+    <section id='projects' className="flex flex-col gap-11 px-6 md:px-20 lg:px-30 mb-40">
       <SectionIntro sectionName={"Projects"} />
 
       <div className="flex flex-col gap-26">
