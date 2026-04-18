@@ -6,11 +6,8 @@ import DomainCard from './ui/DomainCard';
 export default function About() 
 {
   return (
-    /* 1. Responsive Padding: px-6 on mobile, up to px-30 on desktop */
-    <section id='about' className="flex flex-col gap-11 px-6 md:px-20 lg:px-30 mb-40">
+    <section id='about' className="flex flex-col gap-11 px-6 md:px-20 lg:px-30 mb-25 lg:mb-35">
       <SectionIntro sectionName={"About"} />
-
-      {/* 2. Responsive Grid: grid-cols-1 by default, lg:grid-cols-2 for desktop */}
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 w-full items-start'>
         
         {/* Left Column (Bio & Skills) */}
@@ -21,7 +18,7 @@ export default function About()
               <h3 className='font-mono text-muted-foreground'>bio.json</h3>
             </div>
 
-            <pre className="font-mono text-sm leading-loose rounded-lg border-white/5 whitespace-pre-wrap sm:whitespace-pre">
+            <pre className="font-mono text-sm leading-normal lg:leading-loose rounded-lg border-white/5 ">
               <span className="text-primary">{"{"}</span>
               {"\n  "}
               <span className="text-cloud">"role"</span>: <span className="text-iot">"Fullstack developer"</span>,
@@ -98,7 +95,7 @@ export default function About()
             />
           </div>
 
-          <div className='border rounded-xl max-w-full overflow-hidden'>
+          <div className='border rounded-xl max-w-full overflow-scroll'>
             <div className='flex px-5 py-4 gap-2 items-center border-b bg-muted/20'>
               <div className='h-3 w-3 rounded-full bg-red-500/80 shrink-0' />
               <div className='h-3 w-3 rounded-full bg-yellow-500/80 shrink-0' />
@@ -106,8 +103,8 @@ export default function About()
               <h3 className='ml-2 font-mono text-muted-foreground text-xs tracking-widest'>terminal</h3>
             </div>
 
-            <div className='px-6 py-5 bg-black/20 overflow-x-auto'>
-              <pre className="font-mono text-sm leading-normal text-iot/80 whitespace-pre-wrap sm:whitespace-pre overflow-x-scroll">
+            <div className='px-6 py-5 bg-black/20'>
+              <pre className="font-mono text-sm leading-normal text-iot/80 sm:whitespace-pre overflow-x-scroll">
                 <span className="text-primary">$</span> <span className="text-muted-foreground">cat current.txt</span>
                 {"\n"}
                 Learning frontend development with react and tailwind...

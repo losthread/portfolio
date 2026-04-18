@@ -4,21 +4,21 @@ import ContactCard from './ui/ContactCard';
 
 export default function Contact() {
   return (
-    <section id='contact' className="flex flex-col gap-11 px-6 md:px-20 lg:px-30">
+    <section id='contact' className="flex flex-col gap-11 px-6 md:px-20 lg:px-30 mb-12">
       <SectionIntro sectionName={'Get In Touch'} />
 
       <div className='flex flex-col items-center gap-6'>
-        <div className='flex items-center gap-3 justify-center border px-5 py-2 rounded-4xl border-primary/30'>
+        <div className='flex items-center gap-3 justify-center border px-3 py-1.5 lg:px-5 lg:py-2 rounded-4xl border-primary/30'>
           <div className="h-2 w-2 rounded-full bg-green-600 animate-pulse"></div>
-          <h4 className='font-mono text-muted-foreground text-sm'>Availaible for opportunites</h4>
+          <h4 className='font-mono text-muted-foreground text-xs lg:text-sm'>Availaible for opportunities</h4>
         </div>
 
-        <h3 className='text-3xl font-bold'>
+        <h3 className='text-xl md:text-2xl lg:text-3xl text-center font-bold'>
           Let's Build Something{" "}
           <span 
             className='text-primary' 
             style={{ 
-              textShadow: "0 0 16px var(--primary)" // Adjust RGB to match your primary color
+              textShadow: "0 0 16px var(--primary)"
             }}
           >
             Amazing
@@ -28,13 +28,18 @@ export default function Contact() {
         <p className='text-muted-foreground max-w-142 text-center'>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you have a question or just want to say hi, my inbox is always open!</p>
         
         <a href="mailto:parthnaik.office@gmail.com"
-           className='flex gap-3 items-center font-medium text-md text-primary border border-primary rounded-lg py-4 px-7 bg-primary/11 hover:bg-primary hover:text-black transition-all duration-300 ease-in'>
-            <Mail size={20} />
-            Say Hello
-            <Send size={18} />
+          className='group flex gap-3 items-center font-medium text-md 
+                      rounded-lg py-4 px-7 border
+                      text-primary border-primary bg-primary/10
+                      hover:bg-primary hover:text-black
+                      transition-all duration-300 ease-in-out'
+        >
+            <Mail className='size-5 lg:size-6 transition-transform duration-500 group-hover:scale-115' />
+            <span>Say Hello</span>
+            <Send className='size-5 lg:size-6 transition-transform duration-500 group-hover:translate-x-1.5' />
         </a>
 
-        <div className='flex gap-6 mt-6'>
+        <div className='grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-6 lg:mt-4'>
           <ContactCard 
             icon={'github'}
             social={'GitHub'}

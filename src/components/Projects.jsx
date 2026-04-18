@@ -5,12 +5,12 @@ import ProjectDescription from "./ui/ProjectDescription";
 export default function Projects() 
 {
   return (
-    <section id='projects' className="flex flex-col gap-11 px-6 md:px-20 lg:px-30 mb-40">
+    <section id='projects' className="flex flex-col gap-11 px-6 md:px-20 lg:px-30 mb-20 lg:mb-35">
       <SectionIntro sectionName={"Projects"} />
 
-      <div className="flex flex-col gap-26">
+      <div className="flex flex-col gap-14 lg:gap-20">
         {/* Project 1 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 items-center">
           <ProjectPreview 
             className="order-2 lg:order-1" 
             imagePath={'/squarefoot.png'} 
@@ -29,11 +29,11 @@ export default function Projects()
         </div>
 
         {/* Project 2 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 items-center">
           <ProjectDescription
             className="lg:order-1"
             title={`Personal Finance Tracker`}  
-            description={`A simplified f=personal finance management and budgeting tool featuring data visualisation to analyze expenses, and local data persistence`}
+            description={`A simplified personal finance management and budgeting tool featuring data visualisation to analyze expenses, and local data persistence`}
             techStack={[`Html`, `Css`, `Javascript`]}
             url={`https://ledgertrack.netlify.app/`}
             isReversed={true}

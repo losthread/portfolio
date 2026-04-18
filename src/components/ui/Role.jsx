@@ -17,7 +17,7 @@ export default function TypingText() {
   }, [i]);
 
   return (
-    <h2 className="font-mono text-2xl text-muted-foreground">
+    <h2 className="font-mono text-center text-lg md:text-xl lg:text-2xl text-muted-foreground">
       {displayed}
       <span className="text-primary animate-blink">_</span>
     </h2>

@@ -4,7 +4,7 @@ export default function ContactCard({ icon, social, username, url }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-4 border rounded-lg py-3 px-4 transition-all duration-300 hover:border-primary hover:bg-primary/10"  
+      className="group flex items-center gap-4 border rounded-lg py-3 px-4 transition-all duration-300 hover:border-primary hover:bg-primary/10 overflow-scroll"  
     >
       <img 
         src={`/icons/${icon}.svg`} 

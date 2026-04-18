@@ -5,10 +5,10 @@ import Role from './ui/Role';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center gap-8 pt-10 px-30">
+    <section className="min-h-[90vh] md:min-h-[95vh] lg:min-h-screen flex flex-col items-center justify-center gap-6 lg:gap-8 pt-20 md:pt-15 lg:pt-20 px-10 md:px-20 lg:px-30">
       <Overlay />
 
-      {/* The Subtle Glow Overlay */}
+      {/* Glow overlay */}
       <div 
         className="absolute inset-0 -z-10"
         style={{
@@ -18,7 +18,7 @@ export default function Hero() {
       />
 
       {/* whoami block */}
-      <div className="flex gap-2 items-center border border-primary/30 bg-primary/3 rounded-full py-2 px-5 backdrop-blur-sm">
+      <div className="flex gap-1.5 items-center border border-primary/30 bg-primary/3 rounded-full py-1.5 px-3 lg:py-2 lg:px-5 backdrop-blur-sm">
         <Terminal className="size-4 text-primary" /> 
         <span className="font-mono text-sm text-primary">~/portfolio</span>
         <span className="font-mono text-sm text-muted-foreground">$</span>
@@ -26,8 +26,8 @@ export default function Hero() {
       </div>
 
       {/* Name */}
-      <div>
-        <h1 className="font-sans font-bold text-8xl flex gap-3">
+      <div className='flex flex-col gap-1'>
+        <h1 className="font-sans font-bold text-6xl md:text-7xl lg:text-8xl flex gap-2 lg:gap-3">
           <span className="text-white">
             Parth
           </span>
@@ -41,14 +41,13 @@ export default function Hero() {
             Naik
           </span>
         </h1>
-      </div>
 
-      {/* Animated Role details */}
-      <Role />
+        <Role />
+      </div>
 
       {/* Body Text */}
       <div>
-        <p className="text-muted-foreground text-xl">Exploring   <span className="text-primary">Cybersecurity</span>, <span className="text-iot">IoT</span>, <span className="text-devops">DevOps</span>, and <span className="text-cloud">Cloud</span> technologies.</p>
+        <p className="text-center text-muted-foreground text-lg lg:text-xl">Exploring   <span className="text-primary">Cybersecurity</span>, <span className="text-iot">IoT</span>, <span className="text-devops">DevOps</span>, and <span className="text-cloud">Cloud</span> technologies.</p>
       </div>
 
       {/* Social media links */}
@@ -69,7 +68,7 @@ export default function Hero() {
       <a href="#projects"
          className='group flex items-center gap-2 
                     border rounded-lg py-3 px-6
-                    text-black bg-primary
+                    text-gray-800 font-medium text-sm lg:text-lg bg-primary
                     shadow-[0_0_17px_color-mix(in_srgb,var(--color-primary),transparent_65%)]
                     hover:opacity-80
                     transition-all ease-in-out duration-400

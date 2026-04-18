@@ -11,27 +11,27 @@ export default function DomainCard({ icon: Icon, name, description, theme }) {
 
   return (
     <div 
-      className="flex gap-4 border p-5 rounded-2xl transition-all duration-300 hover:scale-102 overflow-scroll"
+      className="flex gap-4 border p-3 lg:p-5 rounded-2xl transition-all duration-300 hover:scale-102 overflow-scroll"
       style={{
         backgroundColor: `color-mix(in oklch, ${activeColor}, transparent 91%)`,
         borderColor: `color-mix(in oklch, ${activeColor}, transparent 80%)`
       }}
     >
       <div 
-        className="p-3 rounded-xl h-fit flex items-center justify-center"
+        className="p-2 lg:p-3 rounded-xl h-fit flex items-center justify-center"
         style={{
           backgroundColor: `color-mix(in oklch, ${activeColor}, transparent 93%)`,
           color: activeColor
         }}
       >
-        <Icon size={24} strokeWidth={1.5} />
+        <Icon className='size-5 lg:size-6' />
       </div>
 
       <div className="flex flex-col gap-1">
-        <h4 className="font-bold text-lg" style={{ color: activeColor }}>
+        <h4 className="font-bold text-md lg:text-lg" style={{ color: activeColor }}>
           {name}
         </h4>
-        <p className="text-md text-muted-foreground leading-relaxed min-w-60">
+        <p className="text-sm lg:text-md text-muted-foreground leading-relaxed min-w-60">
           {description}
         </p>
       </div>
