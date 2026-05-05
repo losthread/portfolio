@@ -52,9 +52,10 @@ export default function About()
             </div>
 
             <div className='flex flex-col gap-4'>
-              <SkillStat name={`React`} percentageCompletion={50} />
-              <SkillStat name={`TailwindCSS`} percentageCompletion={60} />
-              <SkillStat name={`Django`} percentageCompletion={10} />
+              <SkillStat name={`React`} percentageCompletion={70} />
+              <SkillStat name={`TailwindCSS`} percentageCompletion={80} />
+              <SkillStat name={`Python`} percentageCompletion={60} />
+              <SkillStat name={`FastAPI`} percentageCompletion={40} />
               <SkillStat name={`Javascript`} percentageCompletion={80} />
               <SkillStat name={`HTML/CSS`} percentageCompletion={95} />
             </div>
