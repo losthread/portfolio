@@ -58,7 +58,7 @@ export default function Hero() {
           alt="GitHub" 
         />
         <SocialLink 
-          url="https://www.linkedin.com/in/parth-naik-a26944351/" 
+          url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           icon={'linkedin'} 
           alt="LinkedIn" 
         />
