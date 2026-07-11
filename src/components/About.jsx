@@ -21,11 +21,11 @@ export default function About()
             <pre className="font-mono text-sm leading-normal lg:leading-loose rounded-lg border-white/5 ">
               <span className="text-primary">{"{"}</span>
               {"\n  "}
-              <span className="text-cloud">"role"</span>: <span className="text-iot">"Fullstack developer"</span>,
+              <span className="text-cloud">"role"</span>: <span className="text-iot">"Software Engineer"</span>,
               {"\n  "}
-              <span className="text-cloud">"passion"</span>: <span className="text-iot">"Building Real World Technical Solutions"</span>,
+              <span className="text-cloud">"passion"</span>: <span className="text-iot">"Building scalable software and security tools"</span>,
               {"\n  "}
-              <span className="text-cloud">"learning"</span>: <span className="text-iot">"DevSecOps and IoT"</span>,
+              <span className="text-cloud">"learning"</span>: <span className="text-iot">"DevSecOps and Cloud"</span>,
               {"\n  "}
               <span className="text-cloud">"coffee"</span>: <span className="text-iot">"Not Yet"</span>
               {"\n"}
@@ -36,12 +36,12 @@ export default function About()
           <div className='flex flex-col gap-6 text-muted-foreground text-md'>
             <p>
               I am a student who enjoys exploring new technologies.
-              Not yet committed to any domain in particular but exploring Cybersecurity, IoT, DevOps and Cloud.
+              Passionate about building real world software and cybersecurity solutions
             </p>
 
             <p>
-              Currently learning Frontend development and design principles.
-              Always learning, building and growing.
+              Currently learning Web application security and fullstack development.
+              Always building and growing.
             </p>
           </div>
 
@@ -53,10 +53,10 @@ export default function About()
 
             <div className='flex flex-col gap-4'>
               <SkillStat name={`React`} percentageCompletion={70} />
-              <SkillStat name={`TailwindCSS`} percentageCompletion={80} />
+              <SkillStat name={`TailwindCSS`} percentageCompletion={90} />
               <SkillStat name={`Python`} percentageCompletion={80} />
               <SkillStat name={`FastAPI`} percentageCompletion={70} />
-              <SkillStat name={`Javascript`} percentageCompletion={80} />
+              <SkillStat name={`Javascript`} percentageCompletion={90} />
               <SkillStat name={`PostgreSQL`} percentageCompletion={60} />
             </div>
           </div>
@@ -74,25 +74,19 @@ export default function About()
               theme="cyber" 
               icon={Shield} 
               name="Cybersecurity" 
-              description="Fascinated by red teaming, penetration testing, and malware development." 
-            />
-            <DomainCard 
-              theme="iot" 
-              icon={Cpu} 
-              name="IoT" 
-              description="Excited about daily life smart solutions, and embedded tech." 
+              description="Focusing on CTFs, web application security, offensive scripting, and open-source intelligence (OSINT)." 
             />
             <DomainCard 
               theme="devops" 
               icon={Server} 
               name="DevOps" 
-              description="Curious about CI/CD pipelines, containerization, and infrastructure automation." 
+              description="Exploring infrastructure efficiency with Docker and containerization technologies." 
             />
             <DomainCard 
               theme="cloud" 
               icon={Cloud} 
-              name="Cloud" 
-              description="Interested in AWS, Azure, and cloud-native architectures." 
+              name="Cloud Computing" 
+              description="Actively learning cloud fundamentals and exploring how to deploy secure, scalable architectures." 
             />
           </div>
 
@@ -108,15 +102,11 @@ export default function About()
               <pre className="font-mono text-sm leading-normal text-iot/80 sm:whitespace-pre overflow-x-scroll">
                 <span className="text-primary">$</span> <span className="text-muted-foreground">cat current.txt</span>
                 {"\n"}
-                Learning frontend development with react and tailwind...
-                {"\n"}
-                Exploring IoT by tinkering with electronics...
-                {"\n"}
-                Strengthening Core CS subjects:
-                {"\n  "}→ Computer Networks
-                {"\n  "}→ Computer Architecture and Operating Systems
-                {"\n  "}→ Database Management
-                {"\n  "}→ Data Structures and Algorithms
+                [Offensive Security]
+                {"\n  "}→ Web sec auditing, CTFs, and custom security tooling.
+                {"\n\n"}
+                [Software Engineering]
+                {"\n  "}→ Full-stack development & scalable architectures.
                 {"\n"}
                 <span className="text-primary">$</span> <span className="animate-blink bg-muted-foreground h-4 w-2 inline-block align-middle ml-1"></span>
               </pre>

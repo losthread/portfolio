@@ -1,6 +1,6 @@
 import { ExternalLink } from 'lucide-react';
 
-export default function ProjectDescription({ title, description, techStack = [], url, className, isReversed }) 
+export default function ProjectDescription({ title, description, techStack = [], githubUrl, url, className, isReversed }) 
 {
   // Sets mobile to items-start (left) and lg screen to items-end (right) only if isReversed is true
   const alignmentClass = isReversed 
@@ -30,14 +30,38 @@ export default function ProjectDescription({ title, description, techStack = [],
         })}
       </div>
 
-      <a 
-        href={url}
-        target="_blank"  
-        rel="noopener noreferrer"
-        className="group border border-muted rounded-full max-w-fit p-2 transition-all ease-out duration-200 hover:border-primary/50 hover:bg-primary/5"
-      >
-        <ExternalLink className='text-muted-foreground size-5 group-hover:text-primary' />
-      </a>
+      {/* Links Container */}
+      <div className={`flex gap-3 ${isReversed ? "flex-row lg:flex-row-reverse" : "flex-row"}`}>
+        {/* GitHub Link (Only renders if githubUrl is provided) */}
+        {githubUrl && (
+          <a 
+            href={githubUrl}
+            target="_blank"  
+            rel="noopener noreferrer"
+            className="group border border-muted rounded-full max-w-fit p-2 transition-all ease-out duration-200 hover:border-primary/50 hover:bg-primary/5"
+            aria-label="View Source on GitHub"
+          >
+            <img 
+              src="/icons/github.svg" 
+              alt="GitHub" 
+              className="size-5 opacity-60 group-hover:opacity-100 transition-opacity invert dark:invert-0" 
+            />
+          </a>
+        )}
+
+        {/* External Project Link */}
+        {url && (
+          <a 
+            href={url}
+            target="_blank"  
+            rel="noopener noreferrer"
+            className="group border border-muted rounded-full max-w-fit p-2 transition-all ease-out duration-200 hover:border-primary/50 hover:bg-primary/5"
+            aria-label="View Live Project"
+          >
+            <ExternalLink className='text-muted-foreground size-5 group-hover:text-primary' />
+          </a>
+        )}
+      </div>
     </div>
   );
 }

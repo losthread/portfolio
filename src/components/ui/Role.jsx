@@ -1,20 +1,48 @@
 import { useEffect, useState } from "react";
 
+const phrases = ["> Software Engineer", "> Cybersecurity Enthusiast"];
+
 export default function TypingText() {
-  const text = "> Fullstack Developer";
   const [displayed, setDisplayed] = useState("");
-  const [i, setI] = useState(0);
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    if (i < text.length) {
+    const currentText = phrases[phraseIndex];
+
+    if (!isDeleting && displayed.length < currentText.length) {
       const timeout = setTimeout(() => {
-        setDisplayed((prev) => prev + text[i]);
-        setI(i + 1);
+        setDisplayed(currentText.slice(0, displayed.length + 1));
       }, 120);
 
       return () => clearTimeout(timeout);
     }
-  }, [i]);
+
+    if (!isDeleting && displayed.length === currentText.length) {
+      const timeout = setTimeout(() => {
+        setIsDeleting(true);
+      }, 1400);
+
+      return () => clearTimeout(timeout);
+    }
+
+    if (isDeleting && displayed.length > 0) {
+      const timeout = setTimeout(() => {
+        setDisplayed((prev) => prev.slice(0, -1));
+      }, 70);
+
+      return () => clearTimeout(timeout);
+    }
+
+    if (isDeleting && displayed.length === 0) {
+      const timeout = setTimeout(() => {
+        setPhraseIndex((prev) => (prev + 1) % phrases.length);
+        setIsDeleting(false);
+      }, 150);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [displayed, isDeleting, phraseIndex]);
 
   return (
     <h2 className="font-mono text-center text-lg md:text-xl lg:text-2xl text-muted-foreground">

@@ -28,8 +28,8 @@ export default function Contact() {
         <p className='text-muted-foreground max-w-142 text-center'>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you have a question or just want to say hi, my inbox is always open!</p>
         
         <a href="mailto:parthnaik.office@gmail.com"
-          className='group flex gap-3 items-center font-medium text-md 
-                      rounded-lg py-4 px-7 border
+          className='group flex gap-3 items-center font-medium text-sm 
+                      rounded-lg py-3 px-4 lg:py-4 lg:px-7 border
                       text-primary border-primary bg-primary/10
                       hover:bg-primary hover:text-black
                       transition-all duration-300 ease-in-out'
@@ -39,19 +39,12 @@ export default function Contact() {
             <Send className='size-5 lg:size-6 transition-transform duration-500 group-hover:translate-x-1.5' />
         </a>
 
-        <div className='grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-6 lg:mt-4'>
+        <div className='grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-6 lg:mt-4'>
           <ContactCard 
             icon={'github'}
             social={'GitHub'}
             username={'@losthread'}
             url={"https://github.com/losthread"}
-          />
-
-          <ContactCard 
-            icon={'linkedin'}
-            social={'LinkedIn'}
-            username={'in/parth-naik'}
-            url={"https://www.linkedin.com/in/parth-naik-a26944351/?skipRedirect=true"}
           />
 
           <ContactCard 

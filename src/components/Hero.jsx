@@ -47,7 +47,7 @@ export default function Hero() {
 
       {/* Body Text */}
       <div>
-        <p className="text-center text-muted-foreground text-lg lg:text-xl">Exploring   <span className="text-primary">Cybersecurity</span>, <span className="text-iot">IoT</span>, <span className="text-devops">DevOps</span>, and <span className="text-cloud">Cloud</span> technologies.</p>
+        <p className="text-center text-muted-foreground text-lg lg:text-xl">Exploring   <span className="text-primary">Cybersecurity</span>, <span className="text-devops">DevOps</span>, and <span className="text-cloud">Cloud</span> technologies.</p>
       </div>
 
       {/* Social media links */}
@@ -56,11 +56,6 @@ export default function Hero() {
           url="https://github.com/losthread" 
           icon={'github'} 
           alt="GitHub" 
-        />
-        <SocialLink 
-          url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-          icon={'linkedin'} 
-          alt="LinkedIn" 
         />
       </div>
 

@@ -3,7 +3,7 @@ import { X } from 'lucide-react';
 export default function MobileMenu({ isOpen, setIsOpen, navItems }) {
   return (
     <div className={`
-      fixed top-0 right-0 h-full w-[75%] sm:w-[60%] bg-background border-l border-border z-50 md:hidden
+      fixed top-0 right-0 h-full w-[75%] sm:w-[60%] bg-black border-l border-border z-50 md:hidden
       transition-transform duration-300 ease-in-out
       ${isOpen ? "translate-x-0" : "translate-x-full"}
     `}>
