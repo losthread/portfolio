@@ -13,15 +13,15 @@ export default function Projects()
           <ProjectPreview 
             className="order-2 lg:order-1" 
             imagePath={'/spur.png'} 
-            imageAlt={'Square Foot Interiors Website Image'} 
+            imageAlt={'Spur Dashboard Image'} 
             projectUrl={'https://github.com/losthread/spur'} 
             isReversed={false}
           />
 
           <ProjectDescription
             className="order-1 lg:order-2"
-            title={`Square Foot Interior Studios`}  
-            description={`A modern, fully responsive landing page built for an interior design studio. Features smooth animations, optimized performance, and an elegant UI showcasing their portfolio and services.`}
+            title={`Spur: A URL shortener`}  
+            description={`A modern URL shortener built with FastAPI, PostgreSQL, and React. Create short links, track clicks, manage URLs from a dashboard, and analyze usage through interactive charts.`}
             techStack={[`ReactJS`, `TailwindCSS`, `ShadCN UI`, `Python`, `FastAPI`, `Docker`]}
             githubUrl={'https://github.com/losthread/spur'} 
           />
