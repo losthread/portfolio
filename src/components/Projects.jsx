@@ -50,18 +50,18 @@ export default function Projects()
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 items-center">
           <ProjectPreview 
             className="order-2 lg:order-1" 
-            imagePath={'/pscan.png'} 
-            imageAlt={'Port Scanner'} 
-            projectUrl={'https://github.com/losthread/pscan'} 
+            imagePath={'/recon.png'} 
+            imageAlt={'OSINT deanonymizer'} 
+            projectUrl={'https://github.com/losthread/recon'} 
             isReversed={false}
           />
 
           <ProjectDescription
             className="order-1 lg:order-2"
-            title={`Port Scanner`}  
-            description={`A network administration and cybersecurity tool to scan ports like nmap `}
+            title={`OSINT deanonymizer`}  
+            description={`A Deterministic CLI OSINT tool to search and identify someone based on their public social profiles and history, given their username.`}
             techStack={[`Python`]}
-            githubUrl={'https://github.com/losthread/pscan'}
+            githubUrl={'https://github.com/losthread/recon'}
           />
         </div>
       </div>
