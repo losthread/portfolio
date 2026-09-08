@@ -23,9 +23,9 @@ export default function About()
               {"\n  "}
               <span className="text-cloud">"role"</span>: <span className="text-iot">"Software Engineer"</span>,
               {"\n  "}
-              <span className="text-cloud">"passion"</span>: <span className="text-iot">"Building scalable software and security tools"</span>,
+              <span className="text-cloud">"builds"</span>: <span className="text-iot">"Scalable software and security tools"</span>,
               {"\n  "}
-              <span className="text-cloud">"learning"</span>: <span className="text-iot">"DevSecOps and Cloud"</span>,
+              <span className="text-cloud">"interests"</span>: <span className="text-iot">"Backend and DevSecOps"</span>,
               {"\n  "}
               <span className="text-cloud">"coffee"</span>: <span className="text-iot">"Not Yet"</span>
               {"\n"}
@@ -33,62 +33,11 @@ export default function About()
             </pre>
           </div>
 
-          <div className='flex flex-col gap-6 text-muted-foreground text-md'>
-            <p>
-              I am a student who enjoys exploring new technologies.
-              Passionate about building real world software and cybersecurity solutions
-            </p>
-
-            <p>
-              Currently learning Web application security and fullstack development.
-              Always building and growing.
-            </p>
-          </div>
-
-          <div className='flex flex-col gap-4'>
-            <div className='flex gap-3'>
-              <Layers3 className='text-primary' />
-              <h3 className='font-bold'>Skills</h3>
-            </div>
-
-            <div className='flex flex-col gap-4'>
-              <SkillStat name={`React`} percentageCompletion={70} />
-              <SkillStat name={`TailwindCSS`} percentageCompletion={90} />
-              <SkillStat name={`Python`} percentageCompletion={80} />
-              <SkillStat name={`FastAPI`} percentageCompletion={70} />
-              <SkillStat name={`Javascript`} percentageCompletion={90} />
-              <SkillStat name={`PostgreSQL`} percentageCompletion={60} />
-            </div>
-          </div>
         </div>
 
         {/* Right Column (Interests & Terminal) */}
         <div className='flex flex-col gap-7 min-w-0'>
-          <div className='flex gap-3'>
-            <Palette className='text-primary' />
-            <h3 className='font-semibold'>Areas of Interest</h3>
-          </div>
 
-          <div className='flex flex-col gap-4'>
-            <DomainCard 
-              theme="cyber" 
-              icon={Shield} 
-              name="Cybersecurity" 
-              description="Focusing on CTFs, web application security, offensive scripting, and open-source intelligence (OSINT)." 
-            />
-            <DomainCard 
-              theme="devops" 
-              icon={Server} 
-              name="DevOps" 
-              description="Exploring infrastructure efficiency with Docker and containerization technologies." 
-            />
-            <DomainCard 
-              theme="cloud" 
-              icon={Cloud} 
-              name="Cloud Computing" 
-              description="Actively learning cloud fundamentals and exploring how to deploy secure, scalable architectures." 
-            />
-          </div>
 
           <div className='border rounded-xl max-w-full overflow-scroll'>
             <div className='flex px-5 py-4 gap-2 items-center border-b bg-muted/20'>
@@ -103,10 +52,11 @@ export default function About()
                 <span className="text-primary">$</span> <span className="text-muted-foreground">cat current.txt</span>
                 {"\n"}
                 [Offensive Security]
-                {"\n  "}→ Web sec auditing, CTFs, and custom security tooling.
+                {"\n  "}→ Web sec auditing, CTFs, and security tooling.
                 {"\n\n"}
                 [Software Engineering]
-                {"\n  "}→ Full-stack development & scalable architectures.
+                {"\n  "}→ Full-stack development.
+                {"\n  "}→ Scalable Architecture.
                 {"\n"}
                 <span className="text-primary">$</span> <span className="animate-blink bg-muted-foreground h-4 w-2 inline-block align-middle ml-1"></span>
               </pre>

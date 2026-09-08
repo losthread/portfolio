@@ -64,6 +64,25 @@ export default function Projects()
             githubUrl={'https://github.com/losthread/recon'}
           />
         </div>
+
+        {/* Project 2 */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 items-center">
+          <ProjectDescription
+            className="lg:order-1"
+            title={`Distributed Payment System`}  
+            description={`An event driven, microservices based distributed payment system.`}
+            techStack={[`Docker`, `Redis`, `Kafka`, `PostgreSQL`, `FastAPI`, `Python`]}
+            githubUrl={`https://github.com/losthread/distributed-payment-system`}
+            isReversed={true}
+          />
+
+          <ProjectPreview 
+            className=" lg:order-2"
+            imagePath={'/mps.png'} 
+            imageAlt={'Distributed Payment System'} 
+            projectUrl={'https://github.com/losthread/distributed-payment-system'} 
+          />
+        </div>
       </div>
     </section>
   );

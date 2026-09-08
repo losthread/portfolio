@@ -45,17 +45,22 @@ export default function Hero() {
         <Role />
       </div>
 
-      {/* Body Text */}
-      <div>
-        <p className="text-center text-muted-foreground text-lg lg:text-xl">Exploring   <span className="text-primary">Cybersecurity</span>, <span className="text-devops">DevOps</span>, and <span className="text-cloud">Cloud</span> technologies.</p>
-      </div>
-
       {/* Social media links */}
       <div className="flex gap-4">
         <SocialLink 
           url="https://github.com/losthread" 
           icon={'github'} 
           alt="GitHub" 
+        />
+        <SocialLink 
+          url="https://x.com/losthr3ad" 
+          icon={'twitter'}
+          alt="Twitter/X" 
+        />
+        <SocialLink 
+          url="mailto:parthnaik.office@gmail.com" 
+          icon={'mail'}
+          alt="Twitter/X" 
         />
       </div>
 
@@ -74,14 +79,6 @@ export default function Hero() {
                                 transition-transform ease-in-out group-hover:translate-y-1" 
         />
       </a>
-
-      {/* Animated mouse icon */}
-      <div>
-        <Mouse className='size-11 animate-bounce opacity-70 text-primary' 
-               strokeWidth={1} // Lower = thinner. Try 1 for a very sleek look.
-               style={{ filter: "drop-shadow(0 0 8px var(--color-primary))" }}
-        />
-      </div>
     </section>
   );
 }

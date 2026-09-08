@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const phrases = ["> Software Engineer", "> Cybersecurity Enthusiast"];
+const phrases = ["> Software Engineer", "> Security Researcher"];
 
 export default function TypingText() {
   const [displayed, setDisplayed] = useState("");
