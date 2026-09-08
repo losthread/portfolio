@@ -27,7 +27,7 @@ export default function Hero() {
 
       {/* Name */}
       <div className='flex flex-col gap-1'>
-        <h1 className="font-sans font-bold text-6xl md:text-7xl lg:text-8xl flex gap-2 lg:gap-3">
+        <h1 className="font-sans font-bold text-6xl md:text-7xl lg:text-7xl flex gap-2 lg:gap-3 mb-2">
           <span className="text-white">
             Parth
           </span>
