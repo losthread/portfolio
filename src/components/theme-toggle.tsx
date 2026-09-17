@@ -1,28 +1,53 @@
 "use client"
 
 import { useTheme } from "next-themes"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const buttonRef = useRef<HTMLButtonElement>(null)
 
-  // Avoid hydration mismatch — only render after mount
   useEffect(() => setMounted(true), [])
   if (!mounted) return <div className="w-9 h-9" />
 
   const isDark = theme === "dark"
 
+  const handleToggle = () => {
+    const next = isDark ? "light" : "dark"
+
+    // Pin the splash origin to the button center
+    const btn = buttonRef.current
+    if (btn) {
+      const rect = btn.getBoundingClientRect()
+      const x = Math.round(rect.left + rect.width / 2)
+      const y = Math.round(rect.top + rect.height / 2)
+      document.documentElement.style.setProperty("--splash-x", `${x}px`)
+      document.documentElement.style.setProperty("--splash-y", `${y}px`)
+    }
+
+    // Fall back if View Transitions not supported
+    if (!document.startViewTransition) {
+      setTheme(next)
+      return
+    }
+
+    document.startViewTransition(() => {
+      setTheme(next)
+    })
+  }
+
   return (
     <button
+      ref={buttonRef}
       id="theme-toggle"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      onClick={() => setTheme(isDark ? "light" : "dark")}
+      onClick={handleToggle}
       className="
         relative w-9 h-9 rounded-full flex items-center justify-center
         border border-transparent
         hover:border-current hover:bg-black/5 dark:hover:bg-white/10
-        transition-all duration-200 cursor-pointer
+        transition-colors duration-200 cursor-pointer
       "
     >
       {/* Sun */}
@@ -34,9 +59,9 @@ export function ThemeToggle() {
         strokeLinecap="round" strokeLinejoin="round"
         style={{
           position: "absolute",
-          transition: "opacity 150ms, transform 200ms",
+          transition: "opacity 150ms, transform 250ms",
           opacity: isDark ? 0 : 1,
-          transform: isDark ? "rotate(90deg) scale(0.5)" : "rotate(0deg) scale(1)",
+          transform: isDark ? "rotate(90deg) scale(0.4)" : "rotate(0deg) scale(1)",
         }}
       >
         <circle cx="12" cy="12" r="4" />
@@ -59,9 +84,9 @@ export function ThemeToggle() {
         strokeLinecap="round" strokeLinejoin="round"
         style={{
           position: "absolute",
-          transition: "opacity 150ms, transform 200ms",
+          transition: "opacity 150ms, transform 250ms",
           opacity: isDark ? 1 : 0,
-          transform: isDark ? "rotate(0deg) scale(1)" : "rotate(-90deg) scale(0.5)",
+          transform: isDark ? "rotate(0deg) scale(1)" : "rotate(-90deg) scale(0.4)",
         }}
       >
         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
