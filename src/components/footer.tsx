@@ -20,7 +20,21 @@ const socialLinks = [
 
 export default function Footer() {
 	return (
-		<footer className="mt-10 flex flex-nowrap justify-center gap-5 py-5 max-lg:gap-2 max-lg:py-3">
+		<footer className="mt-10 flex justify-center gap-5 py-5 max-lg:gap-2 max-lg:py-3">
+      <a
+        href="https://threadlocked.xyz/"
+        target="_blank"
+        rel="noreferrer"
+        className="relative inline-flex shrink-0 items-center justify-center rounded-lg p-1"
+      >
+        <Image
+          src="/dark-webring.png"
+          alt="ThreadLocked"
+          width={112}
+          height={40}
+          className="h-10 w-28 object-contain"
+        />
+      </a>
 			{socialLinks.map(({ href, label, icon }) => (
 				<a
 					key={label}
@@ -41,6 +55,8 @@ export default function Footer() {
 					<span className="relative z-10 max-lg:hidden">{label}</span>
 				</a>
 			))}
+
+
 		</footer>
 	);
 }

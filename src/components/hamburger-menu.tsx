@@ -28,7 +28,7 @@ export function HamburgerMenu({ links }: HamburgerMenuProps) {
       >
         <svg
           aria-hidden="true"
-          className="size-5"
+          className="size-6"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -56,7 +56,7 @@ export function HamburgerMenu({ links }: HamburgerMenuProps) {
                 href={href}
                 aria-current={isActive ? "page" : undefined}
                 onClick={() => setMenuOpen(false)}
-                className={`rounded-md px-3 py-2 font-caveat text-lg text-black transition-colors hover:bg-foreground/10 dark:text-white dark:hover:bg-white/10 ${
+                className={`rounded-md px-3 py-2 font-caveat font-semibold text-xl text-black transition-colors hover:bg-foreground/10 dark:text-white dark:hover:bg-white/10 ${
                   isActive ? "text-[#1e3a5f] dark:text-emerald-300" : ""
                 }`}
               >
