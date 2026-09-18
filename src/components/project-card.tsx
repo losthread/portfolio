@@ -40,9 +40,9 @@ export function ProjectCard({
         />
       </div>
 
-      <div className="flex flex-col gap-3 p-6 pt-1">
-        <div className="flex items-start justify-between gap-4">
-          <h2 className="font-caveat text-4xl font-semibold leading-none">
+      <div className="flex flex-col gap-4 lg:gap-3 p-5 lg:p-6 pt-1">
+        <div className="flex items-start justify-between lg:gap-4">
+          <h2 className="font-caveat text-3xl lg:text-4xl font-semibold leading-none">
             {title}
           </h2>
           <a
@@ -50,7 +50,7 @@ export function ProjectCard({
             target="_blank"
             rel="noreferrer"
             aria-label={`${title} on GitHub`}
-            className="group shrink-0 rounded-lg p-2 transition-colors hover:bg-foreground/10 dark:hover:bg-white/10"
+            className="group shrink-0 rounded-lg lg:p-2 transition-colors hover:bg-foreground/10 dark:hover:bg-white/10"
           >
             <Image
               src="/github.svg"

@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, inter.variable, headingFont.variable)}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col lg:gap-5 lg:px-90 lg:py-7 relative">
+      <body className="min-h-full flex flex-col lg:gap-5 px-8 lg:px-90 py-3 lg:py-7 relative">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

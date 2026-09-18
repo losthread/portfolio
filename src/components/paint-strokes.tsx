@@ -2,7 +2,7 @@ export function PaintStrokes() {
   return (
     <>
       {/* ─── Light Mode Artsy Paint Strokes (Top-Right & Bottom-Left) + Doodles ──── */}
-      <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden dark:hidden select-none">
+      <div className="fixed inset-0 pointer-events-none -z-10 hidden overflow-hidden sm:block dark:hidden select-none">
         <svg className="absolute width-0 height-0 hidden" aria-hidden="true">
           <defs>
             <filter id="brush-texture-tr" x="-20%" y="-20%" width="140%" height="140%">
@@ -282,7 +282,7 @@ export function PaintStrokes() {
       </div>
 
       {/* ─── Dark Mode: Lighter Cyber Blobs + Nature Doodles (Fishes, Leaves, Flowers) ─ */}
-      <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden hidden dark:block select-none">
+      <div className="fixed inset-0 pointer-events-none -z-10 hidden overflow-hidden sm:dark:block select-none">
         {/* SVG Filter for Dark Blobs (kept lighter) */}
         <svg className="absolute width-0 height-0 hidden" aria-hidden="true">
           <defs>

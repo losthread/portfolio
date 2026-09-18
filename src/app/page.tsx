@@ -2,13 +2,13 @@ import TechStackMarquee from "@/components/techstack"
 
 export default function Home() {
   return (
-    <section className="flex flex-col lg:gap-6 lg:pl-3">
-      <div className="flex flex-col lg:gap-1">
-        <h1 className="font-caveat text-6xl">Parth Naik</h1>
-        <h2 className="font-sans text-xl opacity-75">Software Engineer & Cybersecurity Researcher</h2>
+    <section className="flex flex-col gap-4 lg:gap-6 lg:pl-3">
+      <div className="flex flex-col gap-1 lg:gap-1">
+        <h1 className="font-caveat text-5xl lg:text-6xl">Parth Naik</h1>
+        <h2 className="font-sans text-base lg:text-xl opacity-75">Software Engineer & Security Researcher</h2>
       </div>
 
-      <div className="flex flex-col lg:gap-4 font-sans text-lg opacity-100">
+      <div className="flex flex-col gap-3 font-sans text-base opacity-100 lg:gap-4 lg:text-lg">
         <p>
           Hi, I&apos;m Parth Naik, a 17-year-old software engineer and cybersecurity researcher with a knack for open source.
           I enjoy building things, especially when they end up being useful.

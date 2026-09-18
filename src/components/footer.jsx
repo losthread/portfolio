@@ -20,7 +20,7 @@ const socialLinks = [
 
 export default function Footer() {
 	return (
-		<footer className="mt-auto flex flex-wrap justify-center gap-5 py-5">
+		<footer className="mt-10 flex flex-nowrap justify-center gap-5 py-5 max-lg:gap-2 max-lg:py-3">
 			{socialLinks.map(({ href, label, icon }) => (
 				<a
 					key={label}
@@ -28,7 +28,7 @@ export default function Footer() {
 					target={href.startsWith("mailto:") ? undefined : "_blank"}
 					rel={href.startsWith("mailto:") ? undefined : "noreferrer"}
 					aria-label={label}
-					className="relative inline-flex group items-center justify-center gap-3 rounded-lg px-5 py-3 text-base font-medium text-foreground transition-all duration-300 ease-out"
+					className="group relative inline-flex items-center justify-center gap-3 rounded-lg px-5 py-3 text-base font-medium text-foreground transition-all duration-300 ease-out max-lg:px-3 max-lg:py-2"
 				>
 					<span className="absolute inset-0 rounded-md bg-foreground/10 dark:bg-accent/40 scale-90 opacity-0 transition-all duration-300 ease-out group-hover:scale-100 group-hover:opacity-100 pointer-events-none" />
 					<Image
@@ -38,7 +38,7 @@ export default function Footer() {
 						height={24}
 						className="relative z-10 size-6 object-contain dark:invert"
 					/>
-					<span className="relative z-10">{label}</span>
+					<span className="relative z-10 max-lg:hidden">{label}</span>
 				</a>
 			))}
 		</footer>

@@ -1,6 +1,7 @@
 "use client";
 
 import { ThemeToggle } from "@/components/theme-toggle";
+import { HamburgerMenu } from "@/components/hamburger-menu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -15,17 +16,20 @@ export default function Navbar()
   const pathname = usePathname();
 
   return (
-    <section className="flex w-full flex-row items-center lg:px-4 lg:py-3">
-      <div className="flex flex-1 items-center justify-start">
-        <Link href="/">
-          <h2 className="font-caveat text-4xl font-semibold">
+    <section className="relative flex w-full flex-row items-center gap-2 lg:px-4 py-3 lg:gap-0 lg:py-3 mb-1">
+      <div className="flex min-w-0 flex-1 items-center justify-start">
+        <div className="lg:hidden">
+          <ThemeToggle />
+        </div>
+        <Link href="/" className="hidden lg:block">
+          <h2 className="font-caveat text-xl font-semibold lg:text-4xl">
             Losthread
           </h2>
         </Link>
       </div>
 
-      <div className="flex flex-1 items-center justify-between">
-        <ul className="flex w-full flex-row justify-around text-lg font-caveat font-semibold text-black opacity-80 dark:text-white lg:text-2xl">
+      <div className="hidden min-w-0 flex-1 items-center justify-between lg:flex">
+        <ul className="flex w-full flex-row justify-around gap-1 font-caveat font-semibold text-black opacity-80 dark:text-white lg:gap-0 lg:text-2xl">
           {navigationLinks.map(({ href, label }) =>
           {
             const isActive =
@@ -37,7 +41,7 @@ export default function Navbar()
                 <Link
                   href={href}
                   aria-current={isActive ? "page" : undefined}
-                  className={`group relative inline-flex items-center justify-center px-3 py-1 transition-all duration-300 ease-out ${
+                  className={`group relative inline-flex items-center justify-center px-3 py-1 transition-all duration-300 ease-out max-lg:px-1 ${
                     isActive
                       ? "text-[#1e3a5f] dark:text-emerald-300"
                       : ""
@@ -71,8 +75,11 @@ export default function Navbar()
         </ul>
       </div>
 
-      <div className="flex flex-1 items-center justify-end">
-        <ThemeToggle />
+      <div className="flex min-w-0 flex-1 items-center justify-end">
+        <div className="hidden lg:block">
+          <ThemeToggle />
+        </div>
+        <HamburgerMenu links={navigationLinks} />
       </div>
     </section>
   );
