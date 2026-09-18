@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <section className="flex flex-col gap-4 lg:gap-6 lg:pl-3">
       <div className="flex flex-col gap-1 lg:gap-1">
-        <h1 className="font-caveat text-5xl lg:text-6xl">Parth Naik</h1>
+        <h1 className="font-caveat text-center lg:text-left text-5xl lg:text-6xl">Parth Naik</h1>
         <h2 className="font-sans text-base lg:text-xl opacity-75">Software Engineer & Security Researcher</h2>
       </div>
 
@@ -18,7 +18,7 @@ export default function Home() {
         <p>
           I mainly work with Python, C++, Go, and Typescript. 
           Juggling between Web Apps, low level systems, scripting, databases and pentesting.
-          Stalk me on <a className="underline text-black dark:text-white" href="https://github.com/losthread">GitHub</a>
+          Find me on <a className="underline text-black dark:text-white" href="https://github.com/losthread">GitHub</a>
         </p>
 
         <p>
@@ -27,7 +27,11 @@ export default function Home() {
         </p>
 
         <p>
-          Feel free to reach out to me on <a className="underline" href="https://x.com/losthr3ad">Twitter(x)</a> or drop an <a className="underline" href="mailto:parthnaik.office@gmail.com">Email</a>
+          Feel free to reach out to me on <a className="underline" href="https://x.com/losthr3ad" target="_blank" rel="noreferrer">Twitter(x)</a> or drop an <a className="underline" href="mailto:parthnaik.office@gmail.com">Email</a>.
+        </p>
+
+        <p>
+          Threadlocked <a className="underline" href="https://ring.seggs.lol" target="_blank" rel="noreferrer">Webring</a>.
         </p>
       </div>
 
