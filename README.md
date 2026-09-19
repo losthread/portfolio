@@ -1,2 +1,3 @@
-# Blog
-My blog site
+# Portfolio
+
+Made with Typescript, NextJS, Lucide Icons
