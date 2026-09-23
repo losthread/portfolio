@@ -36,7 +36,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
 }
 
 export async function getBlogPost(slug: string): Promise<BlogPost | null> {
-  if (!/^[a-z0-9-]+$/.test(slug)) {
+  if (!/^[A-Za-z0-9-]+$/.test(slug)) {
     return null;
   }
 
