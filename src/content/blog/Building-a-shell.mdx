@@ -1,0 +1,47 @@
+My first "real" and systems-level project
+
+It was quite a big leap from my previous endeavors. So far, I only had dead-simple static frontend pages, some CLI tools in Python, and a bunch of Linux commands under my belt.
+
+And now I had to make the thing that runs these CLI apps, and that too in C? It had to be fast, of course. I did not even know where to start, since everything I had built so far had some kind of reference guide.
+
+I wandered around a lot of websites, but they were all too comprehensive for me to wrap my head around, until I stumbled upon a blog post by Stephen Brennan [1](https://brennan.io/2015/01/16/write-a-shell-in-c/).
+
+It taught me about the core components of a shell, and more importantly, how to break a large project into modules, namely: lexer [2](https://en.wikipedia.org/wiki/Lexical_analysis), parser [3](https://en.wikipedia.org/wiki/Parsing), and executor.
+
+I researched more about these concepts and also how a command is executed at the CPU level, which is through system calls [4](https://en.wikipedia.org/wiki/System_call):
+
+A process is basically a program being executed.
+
+fork(): Clones the calling process to create an exact duplicate child process [5](https://man7.org/linux/man-pages/man2/fork.2.html).
+exec(): Replaces the current process image with a completely new program [6](https://man7.org/linux/man-pages/man3/exec.3.html).
+wait(): Forces a parent process to pause execution until its child process finishes [7](https://man7.org/linux/man-pages/man2/wait.2.html).
+
+There  are many more, but these three will suffice for a minimal implementation.
+Now what do you do with these calls? Create built-in commands like cd, exit, and help, and execute other programs whose binaries are installed on your computer.
+
+A high-level overview:
+Take commands and arguments.
+Separate them into tokens.
+Parse the tokenized input.
+Perform system calls for your custom commands or call the built-in binaries.
+Handle errors gracefully and glue everything together.
+And there you have it: a minimal implementation of a UNIX shell!
+
+P.S. I tried to simplify my understanding as much as I could. I intentionally excluded code snippets so you can research and decide on an implementation yourself. If you still want to see the code, you can find it on my GitHub [8](https://github.com/losthread/psh).
+
+Note: This is a very basic and minimal implementation. It lacks a lot of features like conditionals, output redirection, piping, tab completion, globbing, and a ton of other things. But the point is that you can add these as you go! The guide above is more than enough for a working project.
+
+I hope this blog helped. Now go build a shell for yourself!
+
+~ Parth Naik
+
+Citations:
+
+1. [Stephen Brennan: Write a Shell in C](https://brennan.io/2015/01/16/write-a-shell-in-c/)
+2. [Lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis)
+3. [Parsing](https://en.wikipedia.org/wiki/Parsing)
+4. [System call](https://en.wikipedia.org/wiki/System_call)
+5. [fork(2)](https://man7.org/linux/man-pages/man2/fork.2.html)
+6. [exec(3)](https://man7.org/linux/man-pages/man3/exec.3.html)
+7. [wait(2)](https://man7.org/linux/man-pages/man2/wait.2.html)
+8. [psh on GitHub](https://github.com/losthread/psh)

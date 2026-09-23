@@ -25,8 +25,8 @@ function previewFromContent(content: string) {
 export async function getBlogPosts(): Promise<BlogPost[]> {
   const filenames = await readdir(blogDirectory);
   const slugs = filenames
-    .filter((filename) => filename.endsWith(".txt"))
-    .map((filename) => filename.replace(/\.txt$/, ""));
+    .filter((filename) => filename.endsWith(".mdx"))
+    .map((filename) => filename.replace(/\.mdx$/, ""));
 
   const posts = await Promise.all(slugs.map((slug) => getBlogPost(slug)));
 
@@ -41,7 +41,7 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
   }
 
   try {
-    const content = await readFile(path.join(blogDirectory, `${slug}.txt`), "utf8");
+    const content = await readFile(path.join(blogDirectory, `${slug}.mdx`), "utf8");
     return {
       slug,
       title: titleFromSlug(slug),
