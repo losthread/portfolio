@@ -36,7 +36,7 @@ export function ProjectCard({
           alt={`${title} preview`}
           fill
           className="object-contain object-center"
-          sizes="100vw"
+          sizes="(max-width: 1024px) 100vw, 1024px"
         />
       </div>
 

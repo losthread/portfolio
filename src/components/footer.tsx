@@ -20,7 +20,7 @@ const socialLinks = [
 
 export default function Footer() {
 	return (
-		<footer className="mt-10 flex justify-center gap-5 py-5 max-lg:gap-2 max-lg:py-3">
+		<footer className="mt-5 lg:mt-0 flex justify-center gap-5 py-5 max-lg:gap-2 max-lg:py-3">
       <a
         href="https://threadlocked.xyz/"
         target="_blank"
@@ -44,7 +44,7 @@ export default function Footer() {
 					aria-label={label}
 					className="group relative inline-flex items-center justify-center gap-3 rounded-lg px-5 py-3 text-base font-medium text-foreground transition-all duration-300 ease-out max-lg:px-3 max-lg:py-2"
 				>
-					<span className="absolute inset-0 rounded-md bg-foreground/10 dark:bg-accent/40 scale-90 opacity-0 transition-all duration-300 ease-out group-hover:scale-100 group-hover:opacity-100 pointer-events-none" />
+					<span className="pointer-events-none absolute inset-0 origin-center scale-x-0 rounded-md bg-foreground/10 opacity-0 transition-all duration-300 ease-out group-hover:scale-x-100 group-hover:opacity-100 dark:bg-accent/40" />
 					<Image
 						src={icon}
 						alt=""

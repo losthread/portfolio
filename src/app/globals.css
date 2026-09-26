@@ -170,7 +170,7 @@
 /* The new theme expands as a circle from the toggle button */
 ::view-transition-new(root) {
   z-index: 9999;
-  animation: theme-splash 0.55s cubic-bezier(0.4, 0, 1, 1) both;
+  animation: theme-splash 0.35s cubic-bezier(0.4, 0, 1, 1) both;
 }
 
 @keyframes theme-splash {

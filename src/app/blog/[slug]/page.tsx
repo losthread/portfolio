@@ -41,10 +41,10 @@ export default async function BlogPost({ params }: BlogPageProps) {
 
   return (
     <article className="flex flex-col gap-3 lg:gap-3 lg:pl-3">
-      <h1 className="inline-flex w-fit self-start py-1 font-caveat text-3xl font-semibold tracking-wide underline decoration-dotted decoration-foreground/60 underline-offset-8 lg:py-2 lg:text-4xl">
+      <h1 className="inline-flex w-fit self-start py-1 font-caveat text-3xl font-semibold tracking-wide underline decoration-dotted decoration-foreground/60 underline-offset-8 dark:text-white lg:py-2 lg:text-4xl">
         {blog.title}
       </h1>
-      <div className="flex flex-col gap-4 font-sans text-base leading-relaxed lg:text-lg">
+      <div className="flex flex-col gap-4 font-sans text-base leading-relaxed dark:text-white/70 lg:text-lg">
         {paragraphs.map((paragraph) => (
           <p key={paragraph} className="whitespace-pre-line">
             {renderInlineMarkdown(paragraph)}

@@ -32,7 +32,7 @@ const techStack = [
 
 export default function TechStackMarquee() {
   return (
-    <div className="mt-2 h-22 w-full min-w-0 overflow-hidden rounded-xl border border-border">
+    <div className="mt-2 h-22 w-full min-w-0 overflow-hidden rounded-xl">
       <Marquee
         pauseOnHover
         repeat={2}

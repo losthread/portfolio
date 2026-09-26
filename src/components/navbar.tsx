@@ -29,7 +29,7 @@ export default function Navbar()
       </div>
 
       <div className="hidden min-w-0 flex-1 items-center justify-between lg:flex">
-        <ul className="flex w-full flex-row justify-around gap-1 font-caveat font-semibold text-black opacity-80 dark:text-white lg:gap-0 lg:text-2xl">
+        <ul className="flex w-full flex-row justify-around gap-1 font-caveat font-semibold text-black/80 dark:text-white/80 lg:gap-0 lg:text-2xl">
           {navigationLinks.map(({ href, label }) =>
           {
             const isActive =
@@ -41,11 +41,7 @@ export default function Navbar()
                 <Link
                   href={href}
                   aria-current={isActive ? "page" : undefined}
-                  className={`group relative inline-flex items-center justify-center px-3 py-1 transition-all duration-300 ease-out max-lg:px-1 ${
-                    isActive
-                      ? "text-[#1e3a5f] dark:text-emerald-300"
-                      : ""
-                  }`}
+                  className={`group relative inline-flex items-center justify-center px-3 py-1 transition-all duration-300 ease-out max-lg:px-1 ${isActive ? "text-white" : ""}`}
                 >
                   <span className="pointer-events-none absolute inset-0 -rotate-3 scale-90 rounded-lg bg-foreground/10 opacity-0 transition-all duration-300 ease-out group-hover:scale-100 group-hover:opacity-100 dark:bg-accent/60" />
 
@@ -54,7 +50,7 @@ export default function Navbar()
 
                     {isActive && (
                       <svg
-                        className="absolute -bottom-2 left-0 h-2 w-full overflow-visible"
+                        className="absolute -bottom-2 left-0 h-2 w-full overflow-visible text-white"
                         viewBox="0 0 100 12"
                         preserveAspectRatio="none"
                       >
