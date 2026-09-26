@@ -27,7 +27,7 @@ function getBottomTapeStyle(slug: string) {
 export function BlogCard({ title, preview, slug }: BlogCardProps) {
   return (
     <Link href={`/blog/${slug}`} className="group block">
-      <article className="relative isolate flex flex-col gap-3 overflow-visible rounded-xl bg-white/10 p-5 transition-transform duration-300 ease-in-out hover:translate-x-1 hover:translate-y-1 hover:rotate-0 dark:bg-white/10 lg:p-6">
+      <article className="relative isolate flex flex-col gap-3 overflow-visible rounded-xl border border-black/20 bg-white/10 p-5 transition-transform duration-300 ease-in-out hover:translate-x-1 hover:translate-y-1 hover:rotate-0 dark:bg-white/10 lg:p-6">
         <span
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 -z-10 rounded-xl shadow-[3px_3px_0_#d8cfbb] transition-shadow duration-300 ease-in-out group-hover:shadow-none dark:shadow-[3px_3px_0_rgba(255,255,255,0.15)] dark:group-hover:shadow-none lg:shadow-[5px_5px_0_#d8cfbb] lg:dark:shadow-[5px_5px_0_rgba(255,255,255,0.15)] lg:dark:group-hover:shadow-none"

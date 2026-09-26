@@ -41,7 +41,7 @@ export default function Navbar()
                 <Link
                   href={href}
                   aria-current={isActive ? "page" : undefined}
-                  className={`group relative inline-flex items-center justify-center px-3 py-1 transition-all duration-300 ease-out max-lg:px-1 ${isActive ? "text-white" : ""}`}
+                  className={`group relative inline-flex items-center justify-center px-3 py-1 transition-all duration-300 ease-out max-lg:px-1 ${isActive ? "text-black dark:text-white" : ""}`}
                 >
                   <span className="pointer-events-none absolute inset-0 -rotate-3 scale-90 rounded-lg bg-foreground/10 opacity-0 transition-all duration-300 ease-out group-hover:scale-100 group-hover:opacity-100 dark:bg-accent/60" />
 
@@ -50,7 +50,7 @@ export default function Navbar()
 
                     {isActive && (
                       <svg
-                        className="absolute -bottom-2 left-0 h-2 w-full overflow-visible text-white"
+                        className="absolute -bottom-2 left-0 h-2 w-full overflow-visible text-black dark:text-white"
                         viewBox="0 0 100 12"
                         preserveAspectRatio="none"
                       >
