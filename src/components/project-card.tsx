@@ -41,8 +41,8 @@ export function ProjectCard({
       </div>
 
       <div className="flex flex-col gap-4 lg:gap-3 p-5 lg:p-6 pt-1">
-        <div className="flex items-start justify-between lg:gap-4">
-          <h2 className="font-caveat text-3xl lg:text-4xl font-semibold leading-none">
+        <div className="flex items-start justify-between gap-2 lg:gap-4">
+          <h2 className="min-w-0 break-words font-caveat text-3xl lg:text-4xl font-semibold leading-none">
             {title}
           </h2>
           <a

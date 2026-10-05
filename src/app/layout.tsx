@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Caveat } from "next/font/google";
+import { Geist, Geist_Mono, Inter, JetBrains_Mono, Caveat } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/navbar";
@@ -8,7 +8,11 @@ import Footer from "@/components/footer";
 import { cn } from "@/lib/utils";
 
 const headingFont = Caveat({subsets: ["latin"], variable: "--font-caveat"});
-const inter = Inter({subsets: ['latin'], variable: '--font-inter'});
+const inter = Inter({subsets: ["latin"], variable: "--font-inter"});
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,10 +33,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, inter.variable, headingFont.variable)}
+      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, inter.variable, jetBrainsMono.variable, headingFont.variable)}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col lg:gap-5 px-5 lg:px-90 py-3 lg:py-7 relative">
+      <body className="min-h-full flex flex-col gap-3 px-4 py-3 relative sm:px-6 lg:gap-5 lg:px-12 lg:py-7 xl:px-90">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -40,7 +44,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           disableTransitionOnChange
         >
           <PaintStrokes />
-          <main className="flex flex-1 flex-col gap-2 lg:gap-5 px-3 lg:px-5">
+          <main className="flex flex-1 flex-col gap-2 px-2 sm:px-3 lg:gap-5 lg:px-5">
             <Navbar />
             {children}
             <Footer />

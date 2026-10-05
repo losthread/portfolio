@@ -32,7 +32,7 @@ const techStack = [
 
 export default function TechStackMarquee() {
   return (
-    <div className="mt-2 h-22 w-full min-w-0 overflow-hidden rounded-xl">
+    <div className="mt-2 h-20 w-full min-w-0 overflow-hidden rounded-xl lg:h-22">
       <Marquee
         pauseOnHover
         repeat={2}
@@ -41,7 +41,7 @@ export default function TechStackMarquee() {
         {techStack.map((tech) => (
           <div
             key={tech.name}
-            className="flex size-16 shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg border bg-black/5 shadow-sm dark:bg-white/10"
+            className="flex size-15 shrink-0 items-center justify-center gap-2 overflow-hidden rounded-lg border bg-black/5 shadow-sm dark:bg-white/10 lg:size-16"
             aria-label={tech.name}
           >
             <Image
@@ -50,7 +50,7 @@ export default function TechStackMarquee() {
               width={44}
               height={44}
               unoptimized
-              className={`size-13 shrink-0 object-contain ${
+              className={`size-12 shrink-0 object-contain lg:size-13 ${
                 tech.invertInDark ? "dark:invert" : ""
               }`}
             />
