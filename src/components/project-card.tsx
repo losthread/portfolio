@@ -30,19 +30,25 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <article className="flex flex-col gap-6 overflow-hidden rounded-xl border border-foreground/15 bg-white/10 dark:border-white/15 dark:bg-black/5">
-      <div className="relative aspect-video w-full overflow-hidden border-b border-foreground/10 bg-foreground/5 dark:border-white/10 dark:bg-black">
+      <a
+        href={github}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={`${title} preview on GitHub`}
+        className="group relative block aspect-video w-full overflow-hidden border-b border-foreground/10 bg-foreground/5 dark:border-white/10 dark:bg-black"
+      >
         <Image
           src={image}
           alt={`${title} preview`}
           fill
-          className="object-contain object-center"
+          className="object-contain object-center transition-transform duration-200 group-hover:scale-[1.02]"
           sizes="(max-width: 1024px) 100vw, 1024px"
         />
-      </div>
+      </a>
 
       <div className="flex flex-col gap-4 lg:gap-3 p-5 lg:p-6 pt-1">
         <div className="flex items-start justify-between gap-2 lg:gap-4">
-          <h2 className="min-w-0 break-words font-caveat text-3xl lg:text-4xl font-semibold leading-none">
+          <h2 className="min-w-0 wrap-break-words font-caveat text-3xl lg:text-4xl font-semibold leading-none">
             {title}
           </h2>
           <a
@@ -62,7 +68,7 @@ export function ProjectCard({
           </a>
         </div>
 
-        <p className="font-sans text-base leading-relaxed opacity-80">
+        <p className="font-sans dark:font-jetbrains-mono text-base leading-relaxed opacity-80">
           {description}
         </p>
 
@@ -71,7 +77,7 @@ export function ProjectCard({
             {technologies.map((technology) => (
               <span
                 key={technology}
-                className="inline-flex items-center gap-1.5 rounded-md bg-foreground/10 px-2 py-0.5 font-sans text-xs font-medium dark:bg-white/10"
+                className="inline-flex items-center gap-1.5 rounded-md bg-foreground/10 px-2 py-0.5 font-sans dark:font-jetbrains-mono text-xs font-medium dark:bg-white/10"
               >
                 {technologyIcons[technology] && (
                   <Image

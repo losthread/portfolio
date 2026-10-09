@@ -56,7 +56,7 @@ export default function Footer() {
 			<section className="flex items-center justify-center lg:gap-1">
 				<a
 					href="https://ring.seggs.lol/redirect?from=Parth&dir=prev"
-					className="font-jetbrains-mono text-sm lg:text-base text-muted-foreground px-3 py-2 transition-colors hover:text-black hover:dark:text-white hover:-translate-y-px transition-all:ease-out"
+					className="font-sans dark:font-jetbrains-mono text-sm lg:text-base text-muted-foreground px-3 py-2 transition-colors hover:text-black hover:dark:text-white hover:-translate-y-px transition-all:ease-out"
 				>
 					← prev	
 				</a>
@@ -78,7 +78,7 @@ export default function Footer() {
 
 				<a
 					href="https://ring.seggs.lol/redirect?from=Parth&dir=next"
-					className="font-jetbrains-mono text-sm lg:text-base text-muted-foreground px-3 py-2 transition-colors hover:text-black hover:dark:text-white hover:-translate-y-px transition-all:ease-out"
+					className="font-sans dark:font-jetbrains-mono text-sm lg:text-base text-muted-foreground px-3 py-2 transition-colors hover:text-black hover:dark:text-white hover:-translate-y-px transition-all:ease-out"
 				>
 					next →
 				</a>
