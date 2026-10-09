@@ -4,6 +4,7 @@ type BlogCardProps = {
   title: string;
   preview: string;
   slug: string;
+  date: string;
 };
 
 function getTapeStyle(slug: string) {
@@ -24,7 +25,7 @@ function getBottomTapeStyle(slug: string) {
   };
 }
 
-export function BlogCard({ title, preview, slug }: BlogCardProps) {
+export function BlogCard({ title, preview, slug, date }: BlogCardProps) {
   return (
     <Link href={`/blog/${slug}`} className="group block">
       <article className="relative isolate flex flex-col gap-3 overflow-visible rounded-xl border border-border bg-background p-5 transition-transform duration-300 ease-out hover:translate-x-1 hover:translate-y-1 hover:rotate-0 dark:hover:translate-x-0 dark:hover:translate-y-0 dark:hover:scale-[1.01] dark:bg-card lg:p-6">
@@ -42,11 +43,14 @@ export function BlogCard({ title, preview, slug }: BlogCardProps) {
           className="pointer-events-none absolute -bottom-3 z-20 h-6 w-24 rounded-sm border border-amber-200/50 bg-amber-100/55 shadow-sm backdrop-blur-[1px] dark:border-amber-100/15 dark:bg-amber-100/15"
           style={getBottomTapeStyle(slug)}
         />
+        <time dateTime="2026-09-23" className="absolute right-5 top-4 font-sans text-xs text-muted-foreground dark:text-white/60">
+          {date}
+        </time>
         <h2 className="font-caveat text-3xl font-semibold leading-none decoration-foreground/50 underline-offset-4 transition-[text-decoration-color] group-hover:underline dark:text-white lg:text-4xl">
           {title}
         </h2>
-        <p className="font-sans text-base leading-relaxed opacity-80 dark:text-white/70 dark:opacity-100">
-          {preview.split(/\s+/).slice(0, 6).join(" ")}...
+        <p className="font-sans dark:font-jetbrains-mono text-base leading-relaxed opacity-80 dark:text-white/70 dark:opacity-100">
+          {preview.split(/\s+/).slice(0, 6).join(" ")}
         </p>
       </article>
     </Link>
