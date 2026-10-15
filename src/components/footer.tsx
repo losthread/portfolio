@@ -30,7 +30,7 @@ const socialLinks = [
 export default function Footer() {
 	return (
 		<footer className="lg:mt-4 flex flex-col justify-center gap-3 max-lg:gap-4 max-lg:py-3">
-			<section className="flex w-full min-w-0 flex-row items-center justify-between max-lg:flex-wrap">
+			<section className="flex w-full min-w-0 flex-row flex-wrap items-center justify-center gap-8">
 				{socialLinks.map(({ href, label, icon, invertInDark }) => (
 					<a
 						key={label}

@@ -33,9 +33,14 @@ export default function Home() {
           I often write some of things I do on my <Link className="underline font-medium text-black dark:text-white" href="/blog">Blog</Link>
         </p>
 
-        <p>
-          Part of the <a className="underline font-medium text-black dark:text-white" href="https://ring.seggs.lol" target="_blank" rel="noreferrer">Threadlocked Webring</a>
-        </p>
+        <div>
+          <p>
+          Member @<a className="underline font-medium text-black dark:text-white" href="https://ring.seggs.lol" target="_blank" rel="noreferrer">l4rps3c CTF</a>
+          </p>
+          <p>
+            Part of the <a className="underline font-medium text-black dark:text-white" href="https://ring.seggs.lol" target="_blank" rel="noreferrer">Threadlocked Webring</a>
+          </p>
+        </div>
       </div>
 
       <TechStackMarquee />

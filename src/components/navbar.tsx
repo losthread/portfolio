@@ -9,6 +9,7 @@ const navigationLinks = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
   { href: "/blog", label: "Blog" },
+  { href: "/links", label: "Links" },
 ];
 
 export default function Navbar()
@@ -16,21 +17,19 @@ export default function Navbar()
   const pathname = usePathname();
 
   return (
-    <section className="relative flex w-full flex-row items-center gap-2 lg:px-4 py-3 lg:gap-0 lg:py-3 mb-1">
-      <div className="flex min-w-0 flex-1 items-center justify-start">
-        <div className="lg:hidden">
-          <ThemeToggle />
-        </div>
-        <Link href="/" className="hidden lg:block">
-          <h2 className="font-caveat text-xl font-semibold lg:text-4xl">
-            Losthread
-          </h2>
+    <section className="relative flex w-full flex-row items-center justify-between gap-2 py-3 lg:px-2 lg:gap-2 lg:py-3 mb-1">
+      <div className="flex min-w-0 flex-1 items-center justify-start gap-4">
+        <Link
+          href="/"
+          aria-label="Home"
+          aria-current={pathname === "/" ? "page" : undefined}
+          className="rounded-md px-1 font-caveat text-2xl md:text-3xl lg:text-3xl font-semibold transition-opacity hover:opacity-70"
+        >
+          losthread
         </Link>
-      </div>
 
-      <div className="hidden min-w-0 flex-1 items-center justify-between lg:flex">
-        <ul className="flex w-full flex-row justify-around gap-1 font-caveat font-semibold text-black/80 dark:text-white/80 lg:gap-0 lg:text-2xl">
-          {navigationLinks.map(({ href, label }) =>
+        <ul className="absolute left-1/2 hidden -translate-x-1/2 flex-row justify-center gap-4 font-caveat font-semibold text-black/80 dark:text-white/80 lg:flex lg:gap-2 lg:text-2xl">
+          {navigationLinks.filter(({ href }) => href !== "/").map(({ href, label }) =>
           {
             const isActive =
               pathname === href ||

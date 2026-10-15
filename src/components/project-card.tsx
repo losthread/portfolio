@@ -29,7 +29,7 @@ export function ProjectCard({
   image,
 }: ProjectCardProps) {
   return (
-    <article className="flex flex-col gap-6 overflow-hidden rounded-xl border border-foreground/15 bg-white/10 dark:border-white/15 dark:bg-black/5">
+    <article className="page-reveal-card flex flex-col gap-6 overflow-hidden rounded-xl border border-foreground/15 bg-white/10 dark:border-white/15 dark:bg-black/5">
       <a
         href={github}
         target="_blank"

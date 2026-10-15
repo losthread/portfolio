@@ -40,7 +40,7 @@ export default async function BlogPost({ params }: BlogPageProps) {
       <h1 className="inline-flex w-fit self-start py-1 font-caveat text-3xl font-semibold tracking-wide underline decoration-dotted decoration-foreground/60 underline-offset-8 dark:text-white lg:py-2 lg:text-4xl">
         Building A Shell
       </h1>
-      <div className="flex flex-col gap-4 font-sans dark:font-jetbrains-mono text-base leading-relaxed dark:leading-normal text-black/70 dark:text-white/70 lg:text-md">
+      <div className="flex flex-col gap-4 font-sans dark:font-jetbrains-mono text-base lg:text-lg leading-relaxed dark:leading-normal text-black/70 dark:text-white/70 lg:text-md">
         <p>My first &quot;real&quot; and systems-level project</p>
         <p>
           It was quite a big leap from my previous endeavors. So far, I only had dead-simple static frontend pages, some CLI tools in Python, and a bunch of Linux commands under my belt.

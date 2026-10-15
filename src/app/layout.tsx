@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/navbar";
 import { PaintStrokes } from "@/components/paint-strokes";
 import Footer from "@/components/footer";
+import { PageReveal } from "@/components/page-reveal";
 import { cn } from "@/lib/utils";
 
 const headingFont = Caveat({subsets: ["latin"], variable: "--font-caveat"});
@@ -36,7 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, inter.variable, jetBrainsMono.variable, headingFont.variable)}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col gap-3 px-4 py-3 relative sm:px-6 lg:gap-5 lg:px-12 lg:py-7 xl:px-90">
+      <body className="min-h-full flex flex-col gap-3 px-4 py-3 relative sm:px-18 md:px-26 md:text-[17px] lg:gap-5 lg:px-50 lg:py-7 xl:px-80">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -44,9 +45,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           disableTransitionOnChange
         >
           <PaintStrokes />
-          <main className="flex flex-1 flex-col gap-2 px-2 sm:px-3 lg:gap-5 lg:px-5">
+          <main className="flex flex-1 flex-col gap-2 px-2 sm:px-5 md:px-6 lg:gap-5 lg:px-2">
             <Navbar />
-            {children}
+            <PageReveal>{children}</PageReveal>
             <Footer />
           </main>
         </ThemeProvider>
