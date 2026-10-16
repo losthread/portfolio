@@ -4,8 +4,9 @@ type ProjectCardProps = {
   title: string;
   description: string;
   technologies: readonly string[];
-  github: string;
+  github?: string;
   image: string;
+  lightImage?: string;
 };
 
 const technologyIcons: Record<string, { logo: string; invertInDark: boolean }> = {
@@ -19,6 +20,7 @@ const technologyIcons: Record<string, { logo: string; invertInDark: boolean }> =
   Redis: { logo: "redis/redis-original.svg", invertInDark: false },
   Kafka: { logo: "apachekafka/apachekafka-original.svg", invertInDark: true },
   PostgreSQL: { logo: "postgresql/postgresql-original.svg", invertInDark: false },
+  SQLite3: { logo: "sqlite/sqlite-original.svg", invertInDark: false },
 };
 
 export function ProjectCard({
@@ -27,45 +29,79 @@ export function ProjectCard({
   technologies,
   github,
   image,
+  lightImage,
 }: ProjectCardProps) {
+  // Common image content to avoid duplication
+  const imageContent = lightImage ? (
+    <>
+      <Image
+        src={lightImage}
+        alt={`${title} preview`}
+        fill
+        className="object-contain object-center transition-transform duration-200 group-hover:scale-[1.02] dark:hidden"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+      />
+      <Image
+        src={image}
+        alt=""
+        fill
+        className="hidden object-contain object-center transition-transform duration-200 group-hover:scale-[1.02] dark:block"
+        sizes="(max-width: 1024px) 100vw, 1024px"
+      />
+    </>
+  ) : (
+    <Image
+      src={image}
+      alt={`${title} preview`}
+      fill
+      className="object-contain object-center transition-transform duration-200 group-hover:scale-[1.02]"
+      sizes="(max-width: 1024px) 100vw, 1024px"
+    />
+  );
+
   return (
     <article className="page-reveal-card flex flex-col gap-6 overflow-hidden rounded-xl border border-foreground/15 bg-white/10 dark:border-white/15 dark:bg-black/5">
-      <a
-        href={github}
-        target="_blank"
-        rel="noreferrer"
-        aria-label={`${title} preview on GitHub`}
-        className="group relative block aspect-video w-full overflow-hidden border-b border-foreground/10 bg-foreground/5 dark:border-white/10 dark:bg-black"
-      >
-        <Image
-          src={image}
-          alt={`${title} preview`}
-          fill
-          className="object-contain object-center transition-transform duration-200 group-hover:scale-[1.02]"
-          sizes="(max-width: 1024px) 100vw, 1024px"
-        />
-      </a>
+      {/* Conditionally render as an <a> if github exists, otherwise as a static <div> */}
+      {github ? (
+        <a
+          href={github}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`${title} preview on GitHub`}
+          className="group relative block aspect-video w-full overflow-hidden border-b border-foreground/10 bg-foreground/5 dark:border-white/10 dark:bg-black"
+        >
+          {imageContent}
+        </a>
+      ) : (
+        <div className="relative block aspect-video w-full overflow-hidden border-b border-foreground/10 bg-foreground/5 dark:border-white/10 dark:bg-black">
+          {imageContent}
+        </div>
+      )}
 
       <div className="flex flex-col gap-4 lg:gap-3 p-5 lg:p-6 pt-1">
         <div className="flex items-start justify-between gap-2 lg:gap-4">
           <h2 className="min-w-0 wrap-break-words font-caveat text-3xl lg:text-4xl font-semibold leading-none">
             {title}
           </h2>
-          <a
-            href={github}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`${title} on GitHub`}
-            className="group shrink-0 rounded-lg lg:p-2 transition-colors hover:bg-foreground/10 dark:hover:bg-white/10"
-          >
-            <Image
-              src="/github.svg"
-              alt=""
-              width={24}
-              height={24}
-              className="size-7 object-contain dark:invert"
-            />
-          </a>
+
+          {/* Only render the GitHub icon button if github is provided */}
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${title} on GitHub`}
+              className="group shrink-0 rounded-lg lg:p-2 transition-colors hover:bg-foreground/10 dark:hover:bg-white/10"
+            >
+              <Image
+                src="/github.svg"
+                alt=""
+                width={24}
+                height={24}
+                className="size-7 object-contain dark:invert"
+              />
+            </a>
+          )}
         </div>
 
         <p className="font-sans dark:font-jetbrains-mono text-base leading-relaxed opacity-80">

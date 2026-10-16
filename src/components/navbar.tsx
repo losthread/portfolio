@@ -23,10 +23,13 @@ export default function Navbar()
           href="/"
           aria-label="Home"
           aria-current={pathname === "/" ? "page" : undefined}
-          className="rounded-md px-1 font-caveat text-2xl md:text-3xl lg:text-3xl font-semibold transition-opacity hover:opacity-70"
+          className="hidden rounded-md px-1 font-caveat text-2xl font-semibold transition-opacity hover:opacity-70 lg:block lg:text-3xl"
         >
           losthread
         </Link>
+        <div className="lg:hidden">
+          <ThemeToggle />
+        </div>
 
         <ul className="absolute left-1/2 hidden -translate-x-1/2 flex-row justify-center gap-4 font-caveat font-semibold text-black/80 dark:text-white/80 lg:flex lg:gap-2 lg:text-2xl">
           {navigationLinks.filter(({ href }) => href !== "/").map(({ href, label }) =>

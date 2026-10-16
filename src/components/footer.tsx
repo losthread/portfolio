@@ -46,7 +46,7 @@ export default function Footer() {
 							alt=""
 							width={24}
 							height={24}
-							className={`relative z-10 size-8 lg:size-7 object-contain${invertInDark ? " dark:invert" : ""}`}
+							className={`relative z-10 size-7 lg:size-7 object-contain${invertInDark ? " dark:invert" : ""}`}
 						/>
 						<span className="relative z-10 max-lg:hidden">{label}</span>
 					</a>

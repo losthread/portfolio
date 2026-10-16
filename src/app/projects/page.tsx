@@ -2,6 +2,13 @@ import { ProjectCard } from "@/components/project-card";
 
 const projects = [
   {
+    title: "Agentic harness for penetration testing",
+    description: "A local harness for black-box pentest campaigns. You point it at a target you are allowed to test, give it scope and context, and it keeps testing on its own.",
+    technologies: ["ReactJS", "TailwindCSS", "ShadCN UI", "Python", "FastAPI", "SQLite3", "OpenAI SDK", "MCP", "Docker"],
+    image: "/harness.png",
+    lightImage: "/harness-light.png",
+  },
+  {
     title: "Spur: A URL shortener",
     description:
       "A modern URL shortener built with FastAPI, PostgreSQL, and React. Create short links, track clicks, manage URLs from a dashboard, and analyze usage through interactive charts.",
@@ -55,8 +62,9 @@ export default function Projects() {
             title={project.title}
             description={project.description}
             technologies={project.technologies}
-            github={project.github}
+            github={"github" in project ? project.github : undefined}
             image={project.image}
+            lightImage={"lightImage" in project ? project.lightImage : undefined}
           />
         ))}
       </div>
