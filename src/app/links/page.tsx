@@ -15,6 +15,10 @@ const linkSections: LinkSection[] = [
         title: "Frontier model training technologies",
         url: "https://djdumpling.github.io/2026/01/31/frontier_training.html",
       },
+      {
+        title: "Decision models vs LLMs",
+        url: "https://neubird.ai/blog/decision-models-vs-llms",
+      },
     ],
   },
   {
