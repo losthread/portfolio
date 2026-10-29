@@ -70,7 +70,7 @@
 }
 
 :root {
-  --font-light: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  --font-light: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --background: #fcf8ef;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -157,7 +157,8 @@
 
 /* Uses the View Transitions API. Triggered by ThemeToggle via
    document.startViewTransition(). The new page snapshot expands as a
-   circle from --splash-x / --splash-y with an ease-in curve (slow → fast). */
+   circle from --splash-x / --splash-y with a decelerating ease-out curve
+   (fast → soft stop, like a plane landing). */
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
@@ -173,7 +174,7 @@
 /* The new theme expands as a circle from the toggle button */
 ::view-transition-new(root) {
   z-index: 9999;
-  animation: theme-splash 0.35s cubic-bezier(0.4, 0, 1, 1) both;
+  animation: theme-splash 1.3s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 @keyframes theme-splash {
