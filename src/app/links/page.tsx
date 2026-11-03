@@ -44,7 +44,7 @@ const linkSections: LinkSection[] = [
     ],
   },
   {
-    title: "Others",
+    title: "Miscellaneous",
     links: [],
   },
 ] as const;

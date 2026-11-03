@@ -38,14 +38,15 @@ export function ProjectCard({
         src={lightImage}
         alt={`${title} preview`}
         fill
-        className="object-contain object-center transition-transform duration-200 group-hover:scale-[1.02] dark:hidden"
+        loading="eager"
+        className="object-contain object-center dark:hidden"
         sizes="(max-width: 1024px) 100vw, 1024px"
       />
       <Image
         src={image}
         alt=""
         fill
-        className="hidden object-contain object-center transition-transform duration-200 group-hover:scale-[1.02] dark:block"
+        className="hidden object-contain object-center dark:block"
         sizes="(max-width: 1024px) 100vw, 1024px"
       />
     </>
@@ -54,7 +55,7 @@ export function ProjectCard({
       src={image}
       alt={`${title} preview`}
       fill
-      className="object-contain object-center transition-transform duration-200 group-hover:scale-[1.02]"
+      className="object-contain object-center"
       sizes="(max-width: 1024px) 100vw, 1024px"
     />
   );
@@ -91,7 +92,7 @@ export function ProjectCard({
               target="_blank"
               rel="noreferrer"
               aria-label={`${title} on GitHub`}
-              className="group shrink-0 rounded-lg lg:p-2 transition-colors hover:bg-foreground/10 dark:hover:bg-white/10"
+              className="group shrink-0 rounded-lg lg:p-2 transition10"
             >
               <Image
                 src="/github.svg"

@@ -37,9 +37,6 @@ export default function Home() {
           <p>
           Member @<a className="underline font-medium text-black dark:text-white" href="https://github.com/l4rps3c/" target="_blank" rel="noreferrer">l4rps3c CTF</a>
           </p>
-          <p>
-            Part of the <a className="underline font-medium text-black dark:text-white" href="https://ring.seggs.lol" target="_blank" rel="noreferrer">Threadlocked Webring</a>
-          </p>
         </div>
       </div>
 

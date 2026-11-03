@@ -29,7 +29,7 @@ const socialLinks = [
 
 export default function Footer() {
 	return (
-		<footer className="lg:mt-4 flex flex-col justify-center gap-3 max-lg:gap-4 max-lg:py-3">
+		<footer className="lg:mt-4 flex flex-col justify-center gap-4 max-lg:gap-4 max-lg:py-3">
 			<section className="flex w-full min-w-0 flex-row flex-wrap items-center justify-center gap-8">
 				{socialLinks.map(({ href, label, icon, invertInDark }) => (
 					<a
@@ -53,35 +53,10 @@ export default function Footer() {
 				))}
 			</section>
 
-			<section className="flex items-center justify-center lg:gap-1">
-				<a
-					href="https://ring.seggs.lol/redirect?from=Parth&dir=prev"
-					className="font-sans dark:font-jetbrains-mono text-sm lg:text-base text-muted-foreground px-3 py-2 transition-colors hover:text-black hover:dark:text-white hover:-translate-y-px transition-all:ease-out"
-				>
-					← prev	
-				</a>
-
-				<a
-					href="https://threadlocked.xyz/"
-					target="_blank"
-					rel="noreferrer"
-					className="relative inline-flex shrink-0 items-center justify-center rounded-lg p-1"
-				>
-					<Image
-						src="/dark-webring.png"
-						alt="ThreadLocked"
-						width={84}
-						height={30}
-						className="h-8 w-21 object-contain lg:h-10 lg:w-26"
-					/>
-				</a>
-
-				<a
-					href="https://ring.seggs.lol/redirect?from=Parth&dir=next"
-					className="font-sans dark:font-jetbrains-mono text-sm lg:text-base text-muted-foreground px-3 py-2 transition-colors hover:text-black hover:dark:text-white hover:-translate-y-px transition-all:ease-out"
-				>
-					next →
-				</a>
+			<section className="flex items-center justify-center gap-5 lg:gap-7">
+				<a href="https://larpring.com/api/prev?from=losthread" className="font-sans dark:font-jetbrains-mono underline lg:no-underline text-sm lg:text-base text-muted-foreground px-3 py-2 transition-colors hover:text-black hover:dark:text-white hover:-translate-y-px transition-all:ease-out">← prev</a>
+				<a href="https://larpring.com/api/random?from=losthread" className="font-sans dark:font-jetbrains-mono underline lg:no-underline text-sm lg:text-base text-muted-foreground px-3 py-2 transition-colors hover:text-black hover:dark:text-white hover:-translate-y-px transition-all:ease-out">random</a>
+				<a href="https://larpring.com/api/next?from=losthread" className="font-sans dark:font-jetbrains-mono underline lg:no-underline text-sm lg:text-base text-muted-foreground px-3 py-2 transition-colors hover:text-black hover:dark:text-white hover:-translate-y-px transition-all:ease-out">next →</a>
 			</section>
 		</footer>
 	);
