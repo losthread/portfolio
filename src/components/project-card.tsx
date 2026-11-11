@@ -81,7 +81,7 @@ export function ProjectCard({
 
       <div className="flex flex-col gap-4 lg:gap-3 p-5 lg:p-6 pt-1">
         <div className="flex items-start justify-between gap-2 lg:gap-4">
-          <h2 className="min-w-0 wrap-break-words font-caveat text-3xl lg:text-4xl font-semibold leading-none">
+          <h2 className="min-w-0 wrap-break-words font-caveat text-2xl lg:text-4xl font-semibold leading-none">
             {title}
           </h2>
 
@@ -105,7 +105,7 @@ export function ProjectCard({
           )}
         </div>
 
-        <p className="font-sans dark:font-jetbrains-mono text-base leading-relaxed opacity-80">
+        <p className="font-sans dark:font-jetbrains-mono text-sm sm:text-base leading-relaxed opacity-80">
           {description}
         </p>
 
@@ -123,7 +123,7 @@ export function ProjectCard({
                     width={20}
                     height={20}
                     unoptimized
-                    className={`size-5 object-contain ${
+                    className={`size-4 object-contain ${
                       technologyIcons[technology].invertInDark ? "dark:invert" : ""
                     }`}
                   />

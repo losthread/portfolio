@@ -9,7 +9,7 @@ export default function Home() {
         <h2 className="font-jetbrains-mono dark:font-jetbrains-mono text-center lg:text-left text-base lg:text-xl opacity-75 font-medium text-black dark:text-white dark:opacity-100">Software Engineer & Security Researcher</h2>
       </div>
 
-      <div className="flex flex-col gap-3 font-sans dark:font-jetbrains-mono text-base leading-relaxed dark:leading-normal opacity-100 text-black/70 dark:text-white/70 lg:gap-4 lg:text-lg">
+      <div className="flex flex-col gap-3 font-sans dark:font-jetbrains-mono text-sm leading-relaxed dark:leading-normal opacity-100 text-black/70 dark:text-white/70 lg:gap-4 lg:text-lg">
         <p>
           Hi, I&apos;m Parth Naik, a 17-year-old <span className="font-medium text-black dark:text-white">software engineer</span> and <span className="font-medium text-black dark:text-white">cybersecurity researcher</span> with a knack for open source software.
           I enjoy building things, especially when they end up being useful.

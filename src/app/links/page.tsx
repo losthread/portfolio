@@ -58,17 +58,17 @@ export default function Links() {
       </h1>
 
       <div>
-        <p className="font-sans dark:font-jetbrains-mono text-left lg:text-left text-base lg:text-base opacity-75 font-medium text-black dark:text-white dark:opacity-100">A curated knowledge base of techinal writeups, blogs, articles and other intriguing stuff that I found in some corner of the Internet.</p>
+        <p className="font-sans dark:font-jetbrains-mono text-left lg:text-left text-sm sm:text-base lg:text-base opacity-75 font-medium text-black dark:text-white dark:opacity-100">A curated knowledge base of techinal writeups, blogs, articles and other intriguing stuff that I found in some corner of the Internet.</p>
       </div>
 
       <div className="grid gap-8">
         {linkSections.map((section) => (
-          <section key={section.title} className="flex flex-col gap-3">
-            <h2 className="font-caveat text-3xl font-semibold tracking-wide lg:text-3xl">
+          <section key={section.title} className="flex flex-col gap-1 sm:gap-3">
+            <h2 className="font-caveat text-2xl sm:text-3xl font-semibold tracking-wide lg:text-3xl">
               {section.title}
             </h2>
             {section.links.length > 0 ? (
-              <ul className="flex flex-col gap-2 font-sans text-base leading-relaxed text-black/75 dark:text-white/75">
+              <ul className="flex flex-col gap-2 font-sans text-sm sm:text-base leading-relaxed text-black/75 dark:text-white/75">
                 {section.links.map((link) => (
                   <li key={link.url} className="page-reveal-link">
                     <a
@@ -83,7 +83,7 @@ export default function Links() {
                 ))}
               </ul>
             ) : (
-              <p className="font-sans text-base text-black/45 dark:text-white/45">
+              <p className="font-sans text-sm sm:text-base text-black/45 dark:text-white/45">
                 Nothing here yet.
               </p>
             )}

@@ -46,10 +46,10 @@ export function BlogCard({ title, preview, slug, date }: BlogCardProps) {
         <time dateTime="2026-09-23" className="absolute right-5 top-4 font-sans text-xs text-muted-foreground dark:text-white/60">
           {date}
         </time>
-        <h2 className="font-caveat text-3xl font-semibold leading-none decoration-foreground/50 underline-offset-4 transition-[text-decoration-color] group-hover:underline dark:text-white lg:text-4xl">
+        <h2 className="font-caveat text-2xl sm:text-3xl font-semibold leading-none decoration-foreground/50 underline-offset-4 transition-[text-decoration-color] group-hover:underline dark:text-white lg:text-4xl">
           {title}
         </h2>
-        <p className="font-sans dark:font-jetbrains-mono text-base leading-relaxed opacity-80 dark:text-white/70 dark:opacity-100">
+        <p className="font-sans dark:font-jetbrains-mono text-sm sm:text-base leading-relaxed opacity-80 dark:text-white/70 dark:opacity-100">
           {preview.split(/\s+/).slice(0, 6).join(" ")}
         </p>
       </article>
