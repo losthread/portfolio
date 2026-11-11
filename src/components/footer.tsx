@@ -54,9 +54,9 @@ export default function Footer() {
 			</section>
 
 			<section className="flex items-center justify-center gap-5 lg:gap-7">
-				<a href="https://larpring.com/api/prev?from=losthread" className="font-sans dark:font-jetbrains-mono underline lg:no-underline text-sm lg:text-base text-muted-foreground px-3 py-2 transition-colors hover:text-black hover:dark:text-white hover:-translate-y-px transition-all:ease-out">← prev</a>
-				<a href="https://larpring.com/api/random?from=losthread" className="font-sans dark:font-jetbrains-mono underline lg:no-underline text-sm lg:text-base text-muted-foreground px-3 py-2 transition-colors hover:text-black hover:dark:text-white hover:-translate-y-px transition-all:ease-out">random</a>
-				<a href="https://larpring.com/api/next?from=losthread" className="font-sans dark:font-jetbrains-mono underline lg:no-underline text-sm lg:text-base text-muted-foreground px-3 py-2 transition-colors hover:text-black hover:dark:text-white hover:-translate-y-px transition-all:ease-out">next →</a>
+				<a href="https://ring.seggs.lol/redirect?from=losthread&dir=prev" className="font-sans dark:font-jetbrains-mono underline lg:no-underline text-sm lg:text-base text-muted-foreground px-3 py-2 transition-colors hover:text-black hover:dark:text-white hover:-translate-y-px transition-all:ease-out">← prev</a>
+				<a href="https://ring.seggs.lol/random" className="font-sans dark:font-jetbrains-mono underline lg:no-underline text-sm lg:text-base text-muted-foreground px-3 py-2 transition-colors hover:text-black hover:dark:text-white hover:-translate-y-px transition-all:ease-out">random</a>
+				<a href="https://ring.seggs.lol/redirect?from=losthread&dir=next" className="font-sans dark:font-jetbrains-mono underline lg:no-underline text-sm lg:text-base text-muted-foreground px-3 py-2 transition-colors hover:text-black hover:dark:text-white hover:-translate-y-px transition-all:ease-out">next →</a>
 			</section>
 		</footer>
 	);
