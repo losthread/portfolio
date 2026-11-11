@@ -1,8 +1,13 @@
 import { notFound } from "next/navigation";
+import { getBlogPosts } from "@/lib/blog";
 
 type BlogPageProps = {
   params: Promise<{ slug: string }>;
 };
+
+export function generateStaticParams() {
+  return getBlogPosts().map(({ slug }) => ({ slug }));
+}
 
 function Citation({ number }: { number: number }) {
   const citations: Record<number, string> = {
